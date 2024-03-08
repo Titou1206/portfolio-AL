@@ -1,0 +1,71 @@
+/* GENERAL */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Cardo&family=Roboto:wght@500;700&display=swap')
+/*
+Cardo: font-family: "Cardo", serif; font-weight: 400;
+Roboto: font-family: "Roboto", sans-serif; font-weight: 400/700;
+Anton: font-family: "Anton", sans-serif; font-weight: 400;
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bakground-dark: #1B1B1B;
+    --background-light: #D9D9D9;
+    --secondary-color: #55989A;
+    --content-dark: #ffffff;
+    --content-light: #000000;
+}
+
+.background-dark{
+    background-color: var(--bakground-dark);
+}
+.background-light{
+    background-color: var(--bakground-light);
+}
+.content-dark{
+    color: var(--content-dark);
+}
+.content-light{
+    color: var(--content-light);
+}
+h1, h2{
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+}
+h3, h4{
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+}
+a{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+p{
+    font-family: "Cardo", serif;
+    font-weight: 400;
+}
+h1{
+
+}
+h1 span{
+
+}
+h2{
+
+}
+h3{
+
+}
+h4{
+
+}
+p{
+
+}
+a{
+     
+}
