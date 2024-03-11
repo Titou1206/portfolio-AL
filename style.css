@@ -1,5 +1,29 @@
 /* GENERAL */
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Cardo&family=Roboto:wght@500;700&display=swap');
+/* Webfont: Luciole-Regular */
+@font-face {
+  font-family: 'Luciole';
+  src: url('./fonts/Luciole_webfonts/Luciole-Regular/Luciole-Regular.ttf');
+}
+/* Webfont: Luciole-Bold */
+@font-face {
+  font-family: 'Luciole';
+  src: url('./fonts/Luciole_webfonts/Luciole-Bold/Luciole-Bold.ttf');
+}
+/*Webfont: Anton */
+@font-face {
+  font-family: 'Anton';
+  src: url('./fonts/Anton/Anton-Regular.ttf');
+}
+/* Webfont: Roboto regular */
+@font-face {
+  font-family: 'Roboto';
+  src: url('./fonts/Roboto/Roboto-Regular.ttf');
+}
+/* Webfont: Roboto bold */
+@font-face {
+  font-family: 'Roboto';
+  src: url('./fonts/Roboto/Roboto-Bold.ttf');
+}
 /*
 Cardo: font-family: "Cardo", serif; font-weight: 400;
 Roboto: font-family: "Roboto", sans-serif; font-weight: 400/700;
@@ -88,6 +112,7 @@ h3{
 /* body */
 body{
   position: relative;
+  background-color: var(--bakground-dark);
 }
 /* HEADER */
 header{
@@ -101,10 +126,56 @@ header{
     height: 48px;
     width: auto;
 }
-.menu{
-}
 .menu ul{
   gap: 16px;
+}
+
+/* button dark/light mode */
+/* The switch - the box around the slider */
+.dark-light-button{
+  font-size: 16px;
+  position: relative;
+  display: inline-block;
+  width: 56px;
+  height: 32px;
+}
+/* Hide default HTML checkbox */
+.dark-light-button input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background-light);
+  box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+  transition: .4s;
+  border-radius: 5px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 2px;
+  border-radius: 0px;
+  left: 4px;
+  bottom: 4px;
+  background-color: black;
+  transition: .4s;
+}
+input[id="color-mode"]:checked + .slider {
+  background-color: var(--bakground-dark);
+  box-shadow: inset 2px 5px 10px rgb(0, 0, 0);
+}
+input[id="color-mode"]:checked + .slider:before {
+  background-color: white;
+  transform: translateX(44px) rotate(360deg);
 }
 
 

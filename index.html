@@ -6,11 +6,12 @@
     <title>Portfolio de Antoine LAUGIER | Développeur Web Créatif et Passionné</title>
     <meta name="description" content="Découvrez le portfolio de Antoine LAUGIER, un développeur web passionné avec une expertise dans la création de sites web modernes et performants. Explorez mes projets, mes compétences et découvrez comment je peux donner vie à vos idées en ligne.">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/ico" href="./assets/Logo-AL-developpement-web-black.ico"/>
 </head>
-<body class="background-dark">
+<body class="">
     <header class="large-12 flex align-center justify-between">
         <div class="large-1 logo-header"><!-- Intégration JS --><img src="./assets/logo-AL-developpement-web-white.png" alt="logo de ALDEV"></div>
-        <div class="menu large-11 flex justify-between align-center">
+        <div class="menu large-10 flex justify-between align-center">
             <nav class="pages large-4">
                 <ul class="flex align-center">
                     <li><a class="content-dark" href="">A propos</a></li>
@@ -21,11 +22,16 @@
             <nav class="reseaux large-3">
                 <ul class="flex align-center">
                     <li><a target="_blank"  class="picto linkedin-dark" href="www.linkedin.com/in/antoine-laugier" title="lien vers ma page linkedIn"></a></li>
+                    <li><a target="_blank"  class="picto github-dark" href="" title="lien vers ma page GitHub"></a></li>
                     <li><a class="picto mail-dark" href="mailto:laugierantoine@gmail.com" title="lien pour m'envoyer un mail"></a></li>
                     <li><a class="picto phone-dark" href="tel:+33666529277" title="lien pour m'appeler"></a></li>
                 </ul>
             </nav>
         </div>
+        <label class="dark-light-button"  for="color-mode" title="dark-mode/light-mode">
+            <input type="checkbox" id="color-mode" name="color-mode">
+            <span class="slider"></span>
+        </label>
         <div class="bouton-burger"></div>
     </header>
     <section class="banniere large-12">
@@ -58,6 +64,7 @@
         <footer>
 
         </footer>
-    </main>    
+    </main>  
+    <script src="./app.js"></script>  
 </body>
 </html>
