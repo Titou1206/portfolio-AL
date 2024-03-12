@@ -1,7 +1,10 @@
-let colorMode = document.getElementById("color-mode")
 let body = document.querySelector("body")
-console.log("yo")
-colorMode.addEventListener("checked",(e)=>{
+let colorMode = document.getElementById("switch-mode")
+colorMode.addEventListener("change",(e)=>{
     console.log("yoyo")
-    body.style.backgroundColor = "var(--background-light)"
+    if(colorMode.checked){
+        body.setAttribute("data-theme","light")
+    }else{
+        body.setAttribute("data-theme","dark")
+    }
 })

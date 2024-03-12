@@ -2,27 +2,27 @@
 /* Webfont: Luciole-Regular */
 @font-face {
   font-family: 'Luciole';
-  src: url('./fonts/Luciole_webfonts/Luciole-Regular/Luciole-Regular.ttf');
+  src: url('./fonts/Luciole_webfonts/Luciole-Regular/Luciole-Regular.ttf')format('truetype');
 }
 /* Webfont: Luciole-Bold */
 @font-face {
   font-family: 'Luciole';
-  src: url('./fonts/Luciole_webfonts/Luciole-Bold/Luciole-Bold.ttf');
+  src: url('./fonts/Luciole_webfonts/Luciole-Bold/Luciole-Bold.ttf')format('truetype');
 }
 /*Webfont: Anton */
 @font-face {
   font-family: 'Anton';
-  src: url('./fonts/Anton/Anton-Regular.ttf');
+  src: url('./fonts/Anton/Anton-Regular.ttf')format('truetype');
 }
 /* Webfont: Roboto regular */
 @font-face {
   font-family: 'Roboto';
-  src: url('./fonts/Roboto/Roboto-Regular.ttf');
+  src: url('./fonts/Roboto/Roboto-Regular.ttf')format('truetype');
 }
 /* Webfont: Roboto bold */
 @font-face {
   font-family: 'Roboto';
-  src: url('./fonts/Roboto/Roboto-Bold.ttf');
+  src: url('./fonts/Roboto/Roboto-Bold.ttf')format('truetype');
 }
 /*
 Cardo: font-family: "Cardo", serif; font-weight: 400;
@@ -37,59 +37,73 @@ Anton: font-family: "Anton", sans-serif; font-weight: 400;
 }
 
 :root{
-    --bakground-dark: #1B1B1B;
-    --background-light: #D9D9D9;
     --secondary-color: #55989A;
-    --content-dark: #ffffff;
-    --content-light: #000000;
     --gutter: 16px;
 }
 
-/* couleur */
-.background-dark{
-    background-color: var(--bakground-dark);
+[data-theme="dark"]{
+  --background-color: #1B1B1B;
+  --color-text: #ffffff;
+  --background-select: #D9D9D9;
+  --color-slider: #000000;
 }
-.background-light{
-    background-color: var(--bakground-light);
+[data-theme="light"]{
+  --background-color: #D9D9D9;
+  --color-text: #000000;
+  --background-select: #1B1B1B;
+  --color-slider: #ffffff;
 }
-.content-dark{
-    color: var(--content-dark);
+[data-style="access"]{
+  --font-fam-t1: "Luciole";
+  --font-fam-t2: "Luciole";
+  --font-fam-a: "Luciole";
+  --font-fam-p: "Luciole";
+  --font-size-t1: 80px;
+  --font-size-t2: 56px;
+  --font-size-a: 28px;
+  --font-size-p: 16px;
 }
-.content-light{
-    color: var(--content-light);
+[data-style="normal"]{
+  --font-fam-t1: "Anton", sans-serif;
+  --font-fam-t2: "Roboto", sans-serif;
+  --font-fam-a: "Roboto", sans-serif;
+  --font-fam-p: "Cardo", serif;
+  --font-size-t1: 96px;
+  --font-size-t2: 64px;
+  --font-size-a: 32px;
+  --font-size-p: 20px;
 }
-
 
 /* police */
 h1, h2{
-    font-family: "Anton", sans-serif;
+    font-family: var(--font-fam-t1);
     font-weight: 400;
 }
 h3, h4{
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-fam-t2);
     font-weight: 700;
 }
 a{
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-fam-a);
     font-weight: 400;
 }
 p{
-    font-family: "Cardo", serif;
+    font-family: var(--font-fam-p);
     font-weight: 400;
 }
 
 /* taille */
-h1, h2, h3{
-    font-size: 64px;
+h2 span, h1 span{
+    font-size: var(--font-size-t1);
 }
-h1 span{
-    font-size: 96px;
+h1, h2, h3{
+    font-size: var(--font-size-t2);
 }
 h4, .p-about{
-    font-size: 32px;
+    font-size: var(--font-size-a);
 }
 p, a{
-    font-size: 20px;
+    font-size: var(--font-size-p);
 }
 
 /* h3 */
@@ -112,7 +126,8 @@ h3{
 /* body */
 body{
   position: relative;
-  background-color: var(--bakground-dark);
+  background-color: var(--background-color);
+  color: var(--color-text);
 }
 /* HEADER */
 header{
@@ -131,51 +146,64 @@ header{
 }
 
 /* button dark/light mode */
-/* The switch - the box around the slider */
-.dark-light-button{
-  font-size: 16px;
+.switch-mode {
   position: relative;
-  display: inline-block;
   width: 56px;
   height: 32px;
+  --light: #1B1B1B;
+  --dark: #d9d9d9;
 }
-/* Hide default HTML checkbox */
-.dark-light-button input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+
+.switch-label {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--dark);
+  border-radius: 20px;
+  cursor: pointer;
+  border: 2px solid var(--dark);
 }
-/* The slider */
+
+.checkbox {
+  position: absolute;
+  display: none;
+}
+
 .slider {
   position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--background-light);
-  box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
-  transition: .4s;
-  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
-.slider:before {
-  position: absolute;
+
+.checkbox:checked ~ .slider {
+  background-color: var(--light);
+}
+
+.slider::before {
   content: "";
-  height: 24px;
-  width: 2px;
-  border-radius: 0px;
+  position: absolute;
+  top: 4px;
   left: 4px;
-  bottom: 4px;
-  background-color: black;
-  transition: .4s;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 12px -4px 0px 0px var(--light);
+  box-shadow: inset 12px -4px 0px 0px var(--light);
+  background-color: var(--dark);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
-input[id="color-mode"]:checked + .slider {
-  background-color: var(--bakground-dark);
-  box-shadow: inset 2px 5px 10px rgb(0, 0, 0);
-}
-input[id="color-mode"]:checked + .slider:before {
-  background-color: white;
-  transform: translateX(44px) rotate(360deg);
+
+.checkbox:checked ~ .slider::before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+  background-color: var(--dark);
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 

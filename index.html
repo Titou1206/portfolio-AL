@@ -8,15 +8,15 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/ico" href="./assets/Logo-AL-developpement-web-black.ico"/>
 </head>
-<body class="">
+<body data-theme="dark" data-style="access">
     <header class="large-12 flex align-center justify-between">
         <div class="large-1 logo-header"><!-- Intégration JS --><img src="./assets/logo-AL-developpement-web-white.png" alt="logo de ALDEV"></div>
         <div class="menu large-10 flex justify-between align-center">
             <nav class="pages large-4">
                 <ul class="flex align-center">
-                    <li><a class="content-dark" href="">A propos</a></li>
-                    <li><a class="content-dark" href="">Portfolio</a></li>
-                    <li><a class="content-dark" href="">Compétences</a></li>
+                    <li><a href="">A propos</a></li>
+                    <li><a href="">Portfolio</a></li>
+                    <li><a href="">Compétences</a></li>
                 </ul>
             </nav>
             <nav class="reseaux large-3">
@@ -28,22 +28,24 @@
                 </ul>
             </nav>
         </div>
-        <label class="dark-light-button"  for="color-mode" title="dark-mode/light-mode">
-            <input type="checkbox" id="color-mode" name="color-mode">
-            <span class="slider"></span>
-        </label>
+        <div class="switch-mode">
+            <label class="switch-label">
+              <input type="checkbox" class="checkbox" id="switch-mode" name="switch-mode">
+              <span class="slider"></span>
+            </label>
+          </div> 
         <div class="bouton-burger"></div>
     </header>
     <section class="banniere large-12">
         <div class="large-12 banniere-dark"><!--  <img src="./assets/banniere-developpeur-web.jpg" alt="photo d'un poste de travail d'un développeur">--></div>
-        <h2 class="content-dark">Antoine<br><span>LAUGIER</span></h2>
-        <h1 class="content-dark">< Developpeur Web ></Developpeur></h1>
+        <h2>Antoine<br><span>LAUGIER</span></h2>
+        <h1><span>< Developpeur Web ></span><br>/* Full Stack */</h1>
     </section>
     <main>
         <section class="about">
-            <h3 class="content-dark">A propos de moi</h3>
+            <h3>A propos de moi</h3>
             <div class="container-about">
-                <p class="p-about content-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea commodi voluptate obcaecati rem fugiat unde, sit quibusdam beatae molestias. Nam, illo impedit facilis quod alias ipsa animi temporibus quae repudiandae.</p>
+                <p class="p-abou">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea commodi voluptate obcaecati rem fugiat unde, sit quibusdam beatae molestias. Nam, illo impedit facilis quod alias ipsa animi temporibus quae repudiandae.</p>
                 <div class="img-moi"><img src="./assets/img-moi.jpg" alt="Photo de moi en train de travailler"></div>
             </div>
         </section>
