@@ -46,6 +46,7 @@ Anton: font-family: "Anton", sans-serif; font-weight: 400;
   --color-text: #ffffff;
   --background-select: #D9D9D9;
   --color-slider: #000000;
+  /*--banniere: */
 }
 [data-theme="light"]{
   --background-color: #D9D9D9;
@@ -58,9 +59,10 @@ Anton: font-family: "Anton", sans-serif; font-weight: 400;
   --font-fam-t2: "Luciole";
   --font-fam-a: "Luciole";
   --font-fam-p: "Luciole";
-  --font-size-t1: 80px;
-  --font-size-t2: 56px;
-  --font-size-a: 28px;
+  --font-size-t1: 48px;
+  --font-size-t2: 32px;
+  --font-size-t3: 24px;
+  --font-size-a: 18px;
   --font-size-p: 16px;
 }
 [data-style="normal"]{
@@ -68,10 +70,11 @@ Anton: font-family: "Anton", sans-serif; font-weight: 400;
   --font-fam-t2: "Roboto", sans-serif;
   --font-fam-a: "Roboto", sans-serif;
   --font-fam-p: "Cardo", serif;
-  --font-size-t1: 96px;
-  --font-size-t2: 64px;
-  --font-size-a: 32px;
-  --font-size-p: 20px;
+  --font-size-t1: 64px;
+  --font-size-t2: 48px;
+  --font-size-t3: 32px;
+  --font-size-a: 24px;
+  --font-size-p: 18px;
 }
 
 /* police */
@@ -121,6 +124,9 @@ h3{
 }
 .justify-between{
     justify-content: space-between;
+}
+.mrlauto{
+  margin: 0 auto;
 }
 
 /* body */
@@ -205,6 +211,17 @@ header{
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+
+/* HERO */
+
+.hero{
+  height: 100vh;
+  padding-top: 100px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.72) 80%, rgba(27, 27, 27, 1) 100%), url(./assets/banniere-developpeur-web.jpg);
+  background-size: cover;
+}
+
+
 
 
 
