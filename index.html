@@ -10,36 +10,39 @@
 </head>
 <body data-theme="dark" data-style="normal">
     <header class="large-12 flex align-center justify-between">
-        <div class="large-1 logo-header"><!-- Intégration JS --><img src="./assets/logo-AL-developpement-web-white.png" alt="logo de ALDEV"></div>
-        <div class="menu large-10 flex justify-between align-center">
-            <nav class="pages large-4">
-                <ul class="flex align-center">
+        <div class="logo-header d-none"></div>
+        <div class="large-4 flex align-center gap16">
+            <div class="logo-header"></div>
+            <nav class="pages">
+                <ul class="flex align-center gap16">
                     <li><a href="">A propos</a></li>
                     <li><a href="">Portfolio</a></li>
                     <li><a href="">Compétences</a></li>
                 </ul>
             </nav>
-            <nav class="reseaux large-3">
-                <ul class="flex align-center">
+        </div>
+        <div class="large-8 flex align-center gap16 justify-end">
+            <nav class="reseaux">
+                <ul class="flex align-center gap16">
                     <li><a target="_blank"  class="picto linkedin-dark" href="www.linkedin.com/in/antoine-laugier" title="lien vers ma page linkedIn"></a></li>
                     <li><a target="_blank"  class="picto github-dark" href="" title="lien vers ma page GitHub"></a></li>
                     <li><a class="picto mail-dark" href="mailto:laugierantoine@gmail.com" title="lien pour m'envoyer un mail"></a></li>
                     <li><a class="picto phone-dark" href="tel:+33666529277" title="lien pour m'appeler"></a></li>
                 </ul>
             </nav>
+            <div class="switch-mode">
+                <label class="switch-label">
+                  <input type="checkbox" class="checkbox" id="switch-mode" name="switch-mode">
+                  <span class="slider"></span>
+                </label>
+              </div> 
         </div>
-        <div class="switch-mode">
-            <label class="switch-label">
-              <input type="checkbox" class="checkbox" id="switch-mode" name="switch-mode">
-              <span class="slider"></span>
-            </label>
-          </div> 
-        <div class="bouton-burger"></div>
+        <div class="bouton-burger d-none"></div>
     </header>
     <section class="hero large-12">
         <div class="large-10 flex justify-between mrlauto">
             <h2>Antoine<br><span>LAUGIER</span></h2>
-            <h1><span>< Developpeur Web ></span><br>/* Full Stack */</h1>
+            <h1 class="text-center"><span>< Developpeur Web ></span><br>/* Full Stack */</h1>
         </div>
     </section>
     <main>
