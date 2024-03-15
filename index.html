@@ -9,64 +9,100 @@
     <link rel="shortcut icon" type="image/ico" href="./assets/Logo-AL-developpement-web-black.ico"/>
 </head>
 <body data-theme="dark" data-style="normal">
+    <!-- header -->
     <header class="large-12 flex align-center justify-between">
-        <div class="logo-header d-none"></div>
-        <div class="large-4 flex align-center gap16">
-            <div class="logo-header"></div>
+        <!-- picto a afficher format smartphone -->
+        <a href="#hero" class="d-none"><div class="logo-header curs-point"></div></a>
+        <!-- header gauche -->
+        <div class="flex align-center gap16">
+            <!-- nav -->
             <nav class="pages">
                 <ul class="flex align-center gap16">
-                    <li><a href="">A propos</a></li>
-                    <li><a href="">Portfolio</a></li>
-                    <li><a href="">Compétences</a></li>
+                    <li><a href="#hero"><div class="logo-menu logo-header curs-point"></div></a></li>
+                    <li><a href="#about">A propos</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#competence">Compétences</a></li>
                 </ul>
             </nav>
         </div>
-        <div class="large-8 flex align-center gap16 justify-end">
+        <!-- header droit -->
+        <div class="large-6 flex justify-between">
+            <!-- switch mode -->
+            <div class="flex align-center gap16">
+                <!-- switch dark/light -->
+                <div class="switch-mode">
+                    <label class="switch-label">
+                    <input type="checkbox" class="checkbox" id="switch-mode" name="switch-mode">
+                    <span class="slider"></span>
+                    </label>
+                </div>
+                <!-- switch access -->
+                <label for="switch-access">
+                    <div id="button-access" class="picto p-access curs-point">
+                        <input type="checkbox" class="checkbox" id="switch-access" name="switch-access">
+                    </div>
+                </label> 
+            </div>
+            <!-- nav reseaux / contact -->
             <nav class="reseaux">
                 <ul class="flex align-center gap16">
-                    <li><a target="_blank"  class="picto linkedin-dark" href="www.linkedin.com/in/antoine-laugier" title="lien vers ma page linkedIn"></a></li>
-                    <li><a target="_blank"  class="picto github-dark" href="" title="lien vers ma page GitHub"></a></li>
-                    <li><a class="picto mail-dark" href="mailto:laugierantoine@gmail.com" title="lien pour m'envoyer un mail"></a></li>
-                    <li><a class="picto phone-dark" href="tel:+33666529277" title="lien pour m'appeler"></a></li>
+                    <li><a target="_blank"  class="curs-point" href="https://github.com/Titou1206" title="lien vers ma page GitHub - Nouvelle fenêtre"><div class="picto p-sprite p-github"></div></a></li>
+                    <li><a target="_blank"  class="curs-point" href="https://www.linkedin.com/in/antoine-laugier/" title="lien vers ma page linkedIn - Nouvelle fenêtre"><div class="picto p-sprite p-linkedin "></div></a></li>
+                    <li><a class="curs-point" href="mailto:laugierantoine@gmail.com" title="lien pour m'envoyer un mail"><div  class="picto p-sprite p-mail"></div></a></li>
+                    <li><a class="curs-point" href="tel:+33666529277" title="lien pour m'appeler"><div class="picto p-sprite p-phone"></div></a></li>
                 </ul>
             </nav>
-            <div class="switch-mode">
-                <label class="switch-label">
-                  <input type="checkbox" class="checkbox" id="switch-mode" name="switch-mode">
-                  <span class="slider"></span>
-                </label>
-              </div> 
         </div>
-        <div class="bouton-burger d-none"></div>
+        <!-- burger a afficher au format smartphone -->
+        <div class="burger d-none"></div>
     </header>
-    <section class="hero large-12">
+    <!-- hero -->
+    <section id="hero" class="hero large-12">
+        <!-- div titre -->
         <div class="large-10 flex justify-between mrlauto">
             <h2>Antoine<br><span>LAUGIER</span></h2>
             <h1 class="text-center"><span>< Developpeur Web ></span><br>/* Full Stack */</h1>
         </div>
+        <!-- bouton CV -->
+        <div class="container-bouton large-8 flex justify-end mrlauto">
+            <a class="bouton" target="_blank" href="./assets/CV_Antoine_LAUGIER_Développeur_Web.pdf" title="lien de téléchargement de mon CV au format PDF - Nouvelle fenêtre">Téléchargez mon CV</a>
+        </div>
+        <!-- picto scroll -->
+        <div class="picto p-sprite p-fleche mrlauto"></div>
     </section>
+    <!-- main -->
     <main>
-        <section class="about">
+        <!-- a propos -->
+        <section class="about large-10 mrlauto" id="about">
+            <!-- titre -->
             <h3>A propos de moi</h3>
-            <div class="container-about">
-                <p class="p-abou">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea commodi voluptate obcaecati rem fugiat unde, sit quibusdam beatae molestias. Nam, illo impedit facilis quod alias ipsa animi temporibus quae repudiandae.</p>
+            <!-- div text et image -->
+            <div class="container-about large-12 flex justify-around align-center">
+                <p class="para-about large-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere sunt cupiditate totam deleniti, ex labore qui minima mollitia doloremque cumque eaque voluptate magni sed voluptas hic illo ut quas aliquid?
+                Rerum adipisci, vero suscipit perspiciatis facere, mollitia neque explicabo architecto commodi nulla alias iste vitae corporis, aliquid molestiae blanditiis. Tenetur eius dolores eum magnam aliquam voluptates delectus expedita at quasi!
+                Beatae dolores minus tempore maxime laborum ex doloremque illo modi nam, fuga veritatis, nemo, impedit delectus id. Vero, praesentium error! Iusto quaerat hic nemo eum deserunt. Culpa tempore dolor laborum!</p>
                 <div class="img-moi"><img src="./assets/img-moi.jpg" alt="Photo de moi en train de travailler"></div>
             </div>
         </section>
-        <section class="portfolio">
-            <h3 class="content-dark">Portfolio</h3>
+        <!-- portfolio -->
+        <section class="portfolio large-10 mrlauto" id="portfolio">
+            <!-- titre -->
+            <h3>Portfolio</h3>
+            <!-- swiper slider -->
             <div class="container-projet">
                 <div class="projet">
                     <!-- Intégration JS -->
-                    <h4 class="content-dark">MNTN</h4>
-                    <div><img src="./assets/mntn.jpg" alt="copie d'écran du projet mntn"></div>
+                    <h4>MNTN</h4>
+                    <div class="projet-img"><img src="./assets/mntn.jpg" alt="copie d'écran du projet mntn"></div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eaque cupiditate, quidem possimus sit exercitationem. Sapiente laudantium ea fugiat maiores corrupti placeat et nulla cum. Aperiam recusandae autem quasi sequi.</p>
                 </div>
             </div>
-        </section>        
-        <section class="competence">
+        </section>      
+        <!-- competence -->  
+        <section class="competence" id="competence">
 
         </section>
+        <!-- footer -->
         <footer>
 
         </footer>
