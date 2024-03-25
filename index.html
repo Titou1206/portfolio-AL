@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio de Antoine LAUGIER | Développeur Web Créatif et Passionné</title>
     <meta name="description" content="Découvrez le portfolio de Antoine LAUGIER, un développeur web passionné avec une expertise dans la création de sites web modernes et performants. Explorez mes projets, mes compétences et découvrez comment je peux donner vie à vos idées en ligne.">
+    <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./node_modules/leaflet/dist/leaflet.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/ico" href="./assets/Logo-AL-developpement-web-black.ico"/>
 </head>
@@ -19,52 +21,49 @@
             <nav class="pages">
                 <ul class="flex align-center gap16">
                     <li><a href="#hero"><div class="logo-menu logo-header curs-point"></div></a></li>
+                    <li><a href="#projets">Projets</a></li>
                     <li><a href="#about">A propos</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#competence">Compétences</a></li>
                 </ul>
             </nav>
         </div>
         <!-- header droit -->
-        <div class="large-6 flex justify-between">
-            <!-- switch mode -->
-            <div class="flex align-center gap16">
-                <!-- switch dark/light -->
-                <div class="switch-mode">
-                    <label class="switch-label">
-                    <input type="checkbox" class="checkbox" id="switch-mode" name="switch-mode">
-                    <span class="slider"></span>
-                    </label>
-                </div>
-                <!-- switch access -->
-                <label for="switch-access">
-                    <div id="button-access" class="picto p-access curs-point">
-                        <input type="checkbox" class="checkbox" id="switch-access" name="switch-access">
-                    </div>
-                </label> 
-            </div>
+        <div class="flex align-center justify-end gap16">
             <!-- nav reseaux / contact -->
             <nav class="reseaux">
                 <ul class="flex align-center gap16">
-                    <li><a target="_blank"  class="curs-point" href="https://github.com/Titou1206" title="lien vers ma page GitHub - Nouvelle fenêtre"><div class="picto p-sprite p-github"></div></a></li>
-                    <li><a target="_blank"  class="curs-point" href="https://www.linkedin.com/in/antoine-laugier/" title="lien vers ma page linkedIn - Nouvelle fenêtre"><div class="picto p-sprite p-linkedin "></div></a></li>
-                    <li><a class="curs-point" href="mailto:laugierantoine@gmail.com" title="lien pour m'envoyer un mail"><div  class="picto p-sprite p-mail"></div></a></li>
                     <li><a class="curs-point" href="tel:+33666529277" title="lien pour m'appeler"><div class="picto p-sprite p-phone"></div></a></li>
+                    <li><a class="curs-point" href="mailto:laugierantoine@gmail.com" title="lien pour m'envoyer un mail"><div  class="picto p-sprite p-mail"></div></a></li>
+                    <li><a target="_blank"  class="curs-point" href="https://www.linkedin.com/in/antoine-laugier/" title="lien vers ma page linkedIn - Nouvelle fenêtre"><div class="picto p-sprite p-linkedin "></div></a></li>
+                    <li><a target="_blank"  class="curs-point" href="https://github.com/Titou1206" title="lien vers ma page GitHub - Nouvelle fenêtre"><div class="picto p-sprite p-github"></div></a></li>         
                 </ul>
             </nav>
+            <!-- switch dark/light -->
+            <div class="switch-mode">
+                <label class="switch-label">
+                <input type="checkbox" class="checkbox" id="switch-mode" name="switch-mode">
+                <span class="slider"></span>
+                </label>
+            </div>
+            <!-- switch access -->
+            <label for="switch-access">
+                <div id="button-access" class="picto p-access curs-point">
+                    <input type="checkbox" class="checkbox" id="switch-access" name="switch-access">
+                </div>
+            </label> 
         </div>
         <!-- burger a afficher au format smartphone -->
         <div class="burger d-none"></div>
     </header>
     <!-- hero -->
-    <section id="hero" class="hero large-12">
+    <section id="hero" class="hero large-12 flex">
         <!-- div titre -->
         <div class="large-10 flex justify-between mrlauto">
             <h2>Antoine<br><span>LAUGIER</span></h2>
             <h1 class="text-center"><span>< Developpeur Web ></span><br>/* Full Stack */</h1>
         </div>
         <!-- bouton CV -->
-        <div class="container-bouton large-8 flex justify-end mrlauto">
+        <div class="container-bouton large-10 flex justify-end mrlauto">
             <a class="bouton" target="_blank" href="./assets/CV_Antoine_LAUGIER_Développeur_Web.pdf" title="lien de téléchargement de mon CV au format PDF - Nouvelle fenêtre">Téléchargez mon CV</a>
         </div>
         <!-- picto scroll -->
@@ -72,24 +71,12 @@
     </section>
     <!-- main -->
     <main>
-        <!-- a propos -->
-        <section class="about large-10 mrlauto" id="about">
-            <!-- titre -->
-            <h3>A propos de moi</h3>
-            <!-- div text et image -->
-            <div class="container-about large-12 flex justify-around align-center">
-                <p class="para-about large-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere sunt cupiditate totam deleniti, ex labore qui minima mollitia doloremque cumque eaque voluptate magni sed voluptas hic illo ut quas aliquid?
-                Rerum adipisci, vero suscipit perspiciatis facere, mollitia neque explicabo architecto commodi nulla alias iste vitae corporis, aliquid molestiae blanditiis. Tenetur eius dolores eum magnam aliquam voluptates delectus expedita at quasi!
-                Beatae dolores minus tempore maxime laborum ex doloremque illo modi nam, fuga veritatis, nemo, impedit delectus id. Vero, praesentium error! Iusto quaerat hic nemo eum deserunt. Culpa tempore dolor laborum!</p>
-                <div class="img-moi"><img src="./assets/img-moi.jpg" alt="Photo de moi en train de travailler"></div>
-            </div>
-        </section>
         <!-- portfolio -->
-        <section class="portfolio large-10 mrlauto" id="portfolio">
+        <section class="projets large-112 mrlauto" id="projets">
             <!-- titre -->
-            <h3>Portfolio</h3>
+            <h3 class="large-10 mrlauto">Projets</h3>
             <!-- swiper slider -->
-            <div id="swiper-projet" class="swiper">
+            <div id="swiper-projet" class="swiper large-11">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
@@ -100,26 +87,64 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eaque cupiditate, quidem possimus sit exercitationem. Sapiente laudantium ea fugiat maiores corrupti placeat et nulla cum. Aperiam recusandae autem quasi sequi.</p>
                     </div></a>
                 </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-              
                 <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-              
-                <!-- If we need scrollbar -->
-                <div class="swiper-scrollbar"></div>
+                <div class="swiper-button-prev swiper-fleche"></div>
+                <div class="swiper-button-next swiper-fleche"></div>
             </div>
         </section>      
+        <!-- a propos -->
+        <section class="about large-10 mrlauto" id="about">
+            <!-- titre -->
+            <h3>A propos de moi</h3>
+            <!-- div text et image -->
+            <div class="container-about large-12 flex justify-around align-center">
+                <p class="para-about large-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere sunt cupiditate totam deleniti, ex labore qui minima mollitia doloremque cumque eaque voluptate magni sed voluptas hic illo ut quas aliquid?
+                Rerum adipisci, vero suscipit perspiciatis facere, mollitia neque explicabo architecto commodi nulla alias iste vitae corporis, aliquid molestiae blanditiis. Tenetur eius dolores eum magnam aliquam voluptates delectus expedita at quasi!
+                Beatae dolores minus tempore maxime laborum ex doloremque illo modi nam, fuga veritatis, nemo, impedit delectus id. Vero, praesentium error! Iusto quaerat hic nemo eum deserunt. Culpa tempore dolor laborum!</p>
+                <div class="img-moi"><!-- <img src="./assets/img-moi.jpg" alt="Photo de moi en train de travailler"> --> </div>
+            </div>
+        </section>
         <!-- competence -->  
-        <section class="competence" id="competence">
+        <section class="competences mb160 large-10 mrlauto" id="competences">
+            <h3>Compétences</h3>
 
         </section>
         <!-- footer -->
-        <footer>
-
+        <footer class="flex large-10 justify-between align-center mrlauto">
+            <!-- footer gauche -->
+            <div class="footer-gauche flex">
+                <!-- map -->
+                <div id="map"></div>
+                <div class="aldev flex justify-center align-center">
+                    <a href="#hero"><div class="logo-footer curs-point"></div></a>
+                    <h4 class="mt16 text-center">Antoine LAUGIER<br>Developpement Web</h4>
+                </div>
+            </div>
+            <!-- footer centre -->
+            <div class="footer-centre">
+                <address>
+                    <a class="flex nowrap align-center gap16" target="_blank" href="https://maps.app.goo.gl/HwSWq7MH8z5nQkMK6"><div class="picto p-sprite p-localisation"></div>Lotissement Chanibeau<br>43600 Sainte-Sigolène</a>
+                    <a class="mt16 flex nowrap align-center gap16" href="tel:+33666529277" title="lien pour m'appeler"><div class="picto p-sprite p-phone"></div>06 66 52 92 77</a>
+                    <a class="mt16 flex nowrap align-center gap16" href="mailto:laugierantoine@gmail.com" title="lien pour m'envoyer un mail"><div class="picto p-sprite p-mail"></div>laugierantoine@gmail.com</a>
+                    <a class="mt16 flex nowrap align-center gap16" target="_blank" href="https://www.linkedin.com/in/antoine-laugier/" title="lien vers ma page linkedIn - Nouvelle fenêtre"><div class="picto p-sprite p-linkedin "></div>linkedin.com/in/antoine-laugier</a>
+                    <a class="mt16 flex nowrap align-center gap16" target="_blank" href="https://github.com/Titou1206" title="lien vers ma page GitHub - Nouvelle fenêtre"><div class="picto p-sprite p-github"></div>github.com/Titou1206</a>
+                </address>
+            </div>
+            <!-- footer droit -->
+            <div class="footer-droit">
+                <nav>
+                    <ul>
+                        <li><a href="#hero">Accueil</a></li>
+                        <li class="mt16"><a href="#projets">Projets</a></li>
+                        <li class="mt16"><a href="#about">A propos</a></li>
+                        <li class="mt16"><a href="#competences">Compétences</a></li>
+                    </ul>
+                </nav>
+            </div>
         </footer>
-    </main>  
+    </main>
+    <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
+    <script src="./node_modules/leaflet/dist/leaflet.js"></script>  
     <script src="./app.js"></script>  
 </body>
 </html>
