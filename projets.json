@@ -1,0 +1,16 @@
+{
+    "men sportwear": {
+        "titre": "Men Sportwear",
+        "image": "",
+        "description": "M’S, fondée en 1993, est une boutique spécialisée dans les vêtements, chaussures et équipements de sport pour hommes. Leur objectif est de fournir des produits de qualité pour la pratique sportive en intérieur et en extérieur, en collaborant avec les grandes marques et en proposant leur propre gamme @utdoor, alliant confort, respirabilité et protection grâce à des matériaux innovants.",
+        "objectif": "Développement d'un site web conforme au design de M’S, incluant une page d'accueil statique, un template dynamique pour la catégorie 'chaussures - baskets', et un template statique pour les pages produits. Le site doit être responsive, optimisé pour le référencement et l'accessibilité. Maquettes, images et pictogrammes fournis. Possibilité d'ajouter des animations discrètes pour dynamiser le site. Collaboration avec l'équipe de design pour des ajustements.",
+        "pictos":{
+            "pic1": "p-html",
+            "pic2": "p-css",
+            "pic3": "p-js",
+            "pic4": "p-leaflet"
+        },
+        "librairies": "swiperjs",
+        "lien": "https://titou1206.github.io/Men_Sportswear/"
+    }
+}

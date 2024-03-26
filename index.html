@@ -14,16 +14,15 @@
     <!-- header -->
     <header class="large-12 flex align-center justify-between">
         <!-- picto a afficher format smartphone -->
-        <a href="#hero" class="d-none"><div class="logo-header curs-point"></div></a>
+        <a href="#hero" class="d-none"><div class="logo-header logo curs-point"></div></a>
         <!-- header gauche -->
         <div class="flex align-center gap16">
             <!-- nav -->
             <nav class="pages">
                 <ul class="flex align-center gap16">
-                    <li><a href="#hero"><div class="logo-menu logo-header curs-point"></div></a></li>
+                    <li><a href="#hero"><div class="logo-menu logo logo-header curs-point"></div></a></li>
                     <li><a href="#projets">Projets</a></li>
                     <li><a href="#about">A propos</a></li>
-                    <li><a href="#competence">Compétences</a></li>
                 </ul>
             </nav>
         </div>
@@ -32,10 +31,10 @@
             <!-- nav reseaux / contact -->
             <nav class="reseaux">
                 <ul class="flex align-center gap16">
-                    <li><a class="curs-point" href="tel:+33666529277" title="lien pour m'appeler"><div class="picto p-sprite p-phone"></div></a></li>
-                    <li><a class="curs-point" href="mailto:laugierantoine@gmail.com" title="lien pour m'envoyer un mail"><div  class="picto p-sprite p-mail"></div></a></li>
-                    <li><a target="_blank"  class="curs-point" href="https://www.linkedin.com/in/antoine-laugier/" title="lien vers ma page linkedIn - Nouvelle fenêtre"><div class="picto p-sprite p-linkedin "></div></a></li>
-                    <li><a target="_blank"  class="curs-point" href="https://github.com/Titou1206" title="lien vers ma page GitHub - Nouvelle fenêtre"><div class="picto p-sprite p-github"></div></a></li>         
+                    <li><a class="curs-point" href="tel:+33666529277" title="lien pour m'appeler"><div class="picto p-phone"></div></a></li>
+                    <li><a class="curs-point" href="mailto:laugierantoine@gmail.com" title="lien pour m'envoyer un mail"><div  class="picto p-mail"></div></a></li>
+                    <li><a target="_blank"  class="curs-point" href="https://www.linkedin.com/in/antoine-laugier/" title="lien vers ma page linkedIn - Nouvelle fenêtre"><div class="picto p-linkedin "></div></a></li>
+                    <li><a target="_blank"  class="curs-point" href="https://github.com/Titou1206" title="lien vers ma page GitHub - Nouvelle fenêtre"><div class="picto p-github"></div></a></li>         
                 </ul>
             </nav>
             <!-- switch dark/light -->
@@ -47,7 +46,7 @@
             </div>
             <!-- switch access -->
             <label for="switch-access">
-                <div id="button-access" class="picto p-access curs-point">
+                <div id="button-access" class="p-access curs-point">
                     <input type="checkbox" class="checkbox" id="switch-access" name="switch-access">
                 </div>
             </label> 
@@ -67,14 +66,16 @@
             <a class="bouton" target="_blank" href="./assets/CV_Antoine_LAUGIER_Développeur_Web.pdf" title="lien de téléchargement de mon CV au format PDF - Nouvelle fenêtre">Téléchargez mon CV</a>
         </div>
         <!-- picto scroll -->
-        <div class="picto p-sprite p-fleche mrlauto"></div>
+        <div class="picto p-fleche mrlauto"></div>
     </section>
     <!-- main -->
     <main>
         <!-- portfolio -->
         <section class="projets large-112 mrlauto" id="projets">
             <!-- titre -->
-            <h3 class="large-10 mrlauto">Projets</h3>
+            <div class="large-10 mrlauto">
+                <h3>Projets</h3>
+            </div>
             <!-- swiper slider -->
             <div id="swiper-projet" class="swiper large-11">
                 <!-- Additional required wrapper -->
@@ -93,22 +94,47 @@
             </div>
         </section>      
         <!-- a propos -->
-        <section class="about large-10 mrlauto" id="about">
+        <section class="about large-10 mrlauto mb160" id="about">
             <!-- titre -->
             <h3>A propos de moi</h3>
             <!-- div text et image -->
-            <div class="container-about large-12 flex justify-around align-center">
-                <p class="para-about large-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere sunt cupiditate totam deleniti, ex labore qui minima mollitia doloremque cumque eaque voluptate magni sed voluptas hic illo ut quas aliquid?
-                Rerum adipisci, vero suscipit perspiciatis facere, mollitia neque explicabo architecto commodi nulla alias iste vitae corporis, aliquid molestiae blanditiis. Tenetur eius dolores eum magnam aliquam voluptates delectus expedita at quasi!
-                Beatae dolores minus tempore maxime laborum ex doloremque illo modi nam, fuga veritatis, nemo, impedit delectus id. Vero, praesentium error! Iusto quaerat hic nemo eum deserunt. Culpa tempore dolor laborum!</p>
+            <div class="container-about large-12 flex justify-between align-center mb80">
+                <div class="large-6">
+                    <p class="para-about">Avec une expérience de 15 ans dans le commerce automobile et informatique, je me suis tourné vers le développement web. Diplômé en microélectronique et systèmes embarqués, ma passion pour la programmation a toujours été présente. Grâce à mes années dans le commerce, j'ai développé une certaine polyvalence technique et une compréhension des besoins des clients, que je souhaite mettre à profit dans le domaine du développement web.</p>
+                    <p class="para-about mt16">Je suis conscient de mes compétences en programmation et de ma capacité d'adaptation, et je suis motivé à continuer à apprendre et à évoluer dans ce domaine en constante évolution. Mon objectif est de contribuer humblement à la création d'applications web fonctionnelles et conviviales, en utilisant mes compétences pour répondre aux besoins des utilisateurs de manière efficace et créative.</p>
+                    <div class="competence-container mb80">
+                        <div class=" flex gap32">
+                            <div title="HTML" class="picto p-html"> </div>
+                            <div title="CSS" class="picto p-css"> </div>
+                            <div title="JavaScript" class="picto p-js"> </div>
+                            <div class="picto p-sass"> </div>
+                            <div class="picto p-php"> </div>
+                            <div title="Symfony" class="picto p-sf"> </div>
+                            <div class="picto p-mysql"> </div>
+                        </div>
+                        <div class="flex gap32 align-center mt32">
+                            <div class="picto p-leaflet"> </div>
+                            <p class="p-comp">swiperjs</p>
+                            <p class="p-comp">anime.js</p>
+                        </div>
+                        <div class="flex gap32 align-center mt32">
+                            <div title="VScode" class="picto p-vs"> </div>
+                            <div title="GitHub" class="picto p-github"> </div>
+                            <div title="Filezilla" class="picto p-filezilla"> </div>
+                            <div title="Figma" class="picto p-figma"> </div>
+                            <div title="Notion" class="picto p-notion"> </div>
+                        </div>
+                    </div>
+                    <!-- bouton CV -->
+                    <div class="container-bouton">
+                        <a class="bouton" target="_blank" href="./assets/CV_Antoine_LAUGIER_Développeur_Web.pdf" title="lien de téléchargement de mon CV au format PDF - Nouvelle fenêtre">Téléchargez mon CV</a>
+                    </div> 
+                </div>
+             
                 <div class="img-moi"><!-- <img src="./assets/img-moi.jpg" alt="Photo de moi en train de travailler"> --> </div>
             </div>
         </section>
-        <!-- competence -->  
-        <section class="competences mb160 large-10 mrlauto" id="competences">
-            <h3>Compétences</h3>
-
-        </section>
+       
         <!-- footer -->
         <footer class="flex large-10 justify-between align-center mrlauto">
             <!-- footer gauche -->
@@ -116,18 +142,18 @@
                 <!-- map -->
                 <div id="map"></div>
                 <div class="aldev flex justify-center align-center">
-                    <a href="#hero"><div class="logo-footer curs-point"></div></a>
+                    <a href="#hero"><div class="logo-footer logo curs-point"></div></a>
                     <h4 class="mt16 text-center">Antoine LAUGIER<br>Developpement Web</h4>
                 </div>
             </div>
             <!-- footer centre -->
             <div class="footer-centre">
                 <address>
-                    <a class="flex nowrap align-center gap16" target="_blank" href="https://maps.app.goo.gl/HwSWq7MH8z5nQkMK6"><div class="picto p-sprite p-localisation"></div>Lotissement Chanibeau<br>43600 Sainte-Sigolène</a>
-                    <a class="mt16 flex nowrap align-center gap16" href="tel:+33666529277" title="lien pour m'appeler"><div class="picto p-sprite p-phone"></div>06 66 52 92 77</a>
-                    <a class="mt16 flex nowrap align-center gap16" href="mailto:laugierantoine@gmail.com" title="lien pour m'envoyer un mail"><div class="picto p-sprite p-mail"></div>laugierantoine@gmail.com</a>
-                    <a class="mt16 flex nowrap align-center gap16" target="_blank" href="https://www.linkedin.com/in/antoine-laugier/" title="lien vers ma page linkedIn - Nouvelle fenêtre"><div class="picto p-sprite p-linkedin "></div>linkedin.com/in/antoine-laugier</a>
-                    <a class="mt16 flex nowrap align-center gap16" target="_blank" href="https://github.com/Titou1206" title="lien vers ma page GitHub - Nouvelle fenêtre"><div class="picto p-sprite p-github"></div>github.com/Titou1206</a>
+                    <a class="flex nowrap align-center gap16" target="_blank" href="https://maps.app.goo.gl/HwSWq7MH8z5nQkMK6"><div class="picto p-localisation"></div>Lotissement Chanibeau<br>43600 Sainte-Sigolène</a>
+                    <a class="mt16 flex nowrap align-center gap16" href="tel:+33666529277" title="lien pour m'appeler"><div class="picto p-phone"></div>06 66 52 92 77</a>
+                    <a class="mt16 flex nowrap align-center gap16" href="mailto:laugierantoine@gmail.com" title="lien pour m'envoyer un mail"><div class="picto p-mail"></div>laugierantoine@gmail.com</a>
+                    <a class="mt16 flex nowrap align-center gap16" target="_blank" href="https://www.linkedin.com/in/antoine-laugier/" title="lien vers ma page linkedIn - Nouvelle fenêtre"><div class="picto p-linkedin "></div>linkedin.com/in/antoine-laugier</a>
+                    <a class="mt16 flex nowrap align-center gap16" target="_blank" href="https://github.com/Titou1206" title="lien vers ma page GitHub - Nouvelle fenêtre"><div class="picto p-github"></div>github.com/Titou1206</a>
                 </address>
             </div>
             <!-- footer droit -->
@@ -137,7 +163,6 @@
                         <li><a href="#hero">Accueil</a></li>
                         <li class="mt16"><a href="#projets">Projets</a></li>
                         <li class="mt16"><a href="#about">A propos</a></li>
-                        <li class="mt16"><a href="#competences">Compétences</a></li>
                     </ul>
                 </nav>
             </div>
