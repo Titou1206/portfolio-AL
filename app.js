@@ -47,9 +47,6 @@ switchAccess.addEventListener("change",(e)=>{
 })
 
 // librairie leaflet - on affiche la carte
-
-
-
 var map = L.map('map').setView([45.440138, 4.387329], 8);
 
 let fondMap = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.{ext}', {
@@ -63,7 +60,7 @@ let fondMap = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}
 
 function afficheMap(fondMap,iconCouleur){
     var myIcon = L.icon({
-        iconUrl: `./assets/Logo-AL-developpement-web-${iconCouleur}.png`,
+        iconUrl: `./assets/picto/Logo-AL-developpement-web-${iconCouleur}.png`,
         iconSize: [38, 38],
         iconAnchor: [16, 16],
     });
@@ -75,5 +72,101 @@ function afficheMap(fondMap,iconCouleur){
     btnLeaflet.classList.add("d-none")
 }
 
+/* swiper */
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+    },
+    slidesPerView: 1,
+    // Responsive breakpoints
+    breakpoints: {
+        // when window width is >= 830px
+        830: {
+            slidesPerView: 2,
+            spaceBetween: 80
+        },
+        // when window width is >= 1260px
+        1260: {
+            slidesPerView: 3,
+            spaceBetween: 80
+        },
+        // when window width is >= 1690px
+        1690: {
+            slidesPerView: 4,
+            spaceBetween: 80
+        },
+        // when window width is >= 2120px
+        2120: {
+            slidesPerView: 4,
+            spaceBetween: 80
+        }
+    }
+});
 
 
+/* projets dynamique */
+fetch("./projets.json")
+.then(ret=>{
+    return ret.json()
+})
+.then(projets=>{
+    createSlide(projets)
+})
+
+function createSlide(projets){
+// Role : crée les slides projet dans le swiper
+// parametre : projets - fichier json avec les éléments de chaque projet
+// retour : rien
+    let swiper = document.querySelector(".swiper-wrapper")
+    swiper.innerHTML = ""
+    projets.forEach(projet => {
+        console.log(projet)
+        let pics = recupPicto(projet.pictos)
+        let libs = recupLib(projet.librairies)
+        swiper.innerHTML += `<div class="swiper-slide projet">
+        <div class="card-inner large-12">
+            <div class="card-front large-12">
+                <h4>${projet.titre}</h4>
+                <div class="projet-img mt32 large-12"><img src="./assets/captures-projets/${projet.image}" alt="copie d'écran du projet mntn"></div>
+                <p class="mt32 large-12">${projet.description}</p>
+                <p class="mt32 txt-end">...</p>
+            </div>
+            <div class="card-back large-12">
+                <h4>${projet.type}</h4>
+                <div class="flex  gap16 mt32 align-center">
+                    ${pics}
+                    ${libs}
+                </div>
+                <p class="mt32 mb80 large-12">${projet.objectif}</p>
+                <a href="${projet.lien}">${projet.lien}</a>
+            </div>
+        </div>
+    </div>`
+    });
+}
+
+function recupPicto(elements){
+// parcours : les elements d'un projet pour les mettre dans une chaine de caractère
+// paramtre : elements - le tableau d'elements du projet
+// return : elts - la chaine de caractère a rentrer dans le HTML
+    let elts = ""
+    elements.forEach(element => {
+        elts += `<div class="picto ${element}"></div>`
+    })
+    return elts
+}
+
+function recupLib(elements){
+    // parcours : les elements d'un projet pour les mettre dans une chaine de caractère
+    // paramtre : elements - le tableau d'elements du projet
+    // return : elts - la chaine de caractère a rentrer dans le HTML
+        let elts = ""
+        elements.forEach(element => {
+            elts += `<p class="p-comp">${element}</p>`
+        })
+        return elts
+    }

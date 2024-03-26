@@ -53,23 +53,21 @@ li{
   --background-color: #1B1B1B;
   --color-text: #ffffff;
   --tertiary-color: #d9d9d9;
-  --logo-header: url("./assets/Logo-AL-developpement-web-white.png");
-  --logo-footer: url("./assets/Logo-AL-developpement-web-white.png");
-  --picto: url("./assets/sprite-white.png");
-  --access: url("./assets/access-white.png");
+  --logo: url("./assets/picto/Logo-AL-developpement-web-white.png");
+  --picto: url("./assets/picto/sprite-white.png");
+  --access: url("./assets/picto/access-white.png");
   --banniere: linear-gradient(rgba(27, 27, 27, 0.72) 0%, rgba(27, 27, 27, 0.72) 80%, rgba(27, 27, 27, 1) 100%), url("./assets/banniere-developpeur-web.jpg");
-  --img-about: url("assets/img-about-dark.jpg")
+  --img-about: url("assets/about/img-about-dark.jpg")
 }
 [data-theme="light"]{
   --background-color: #D9D9D9;
   --color-text: #000000;
   --tertiary-color: #1B1B1B;
-  --logo-header: url("./assets/Logo-AL-developpement-web-black.png");
-  --logo-footer: url("./assets/Logo-AL-developpement-web-black.png");
-  --picto: url("./assets/sprite-black.png");
-  --access: url("./assets/access-black.png");
+  --logo: url("./assets/picto/Logo-AL-developpement-web-black.png");
+  --picto: url("./assets/picto/sprite-black.png");
+  --access: url("./assets/picto/access-black.png");
   --banniere: linear-gradient(rgba(217, 217, 217, 0) 80%, rgb(217, 217, 217) 100%), url("./assets/banniere-developpeur-web.jpg");
-  --img-about: url("assets/img-about-light.jpg")
+  --img-about: url("assets/about/img-about-light.jpg")
 }
 [data-style="access"]{
   --font-fam-t1: "Luciole";
@@ -160,6 +158,7 @@ h3{
 .text-center{
   text-align: center;
 }
+.txt-end { text-align: end; }
 .d-none{
   display: none;
 }
@@ -190,9 +189,9 @@ h3{
 .curs-point{
   cursor: pointer;
 }
-.logo, a, .p-comp { transition-duration: 0.3s; }
-.logo:hover { background-image: url("./assets/Logo-AL-developpement-web-blue.png"); }
-footer a:hover, header a:hover, .swiper-fleche:hover, .p-comp:hover { color: var(--secondary-color); }
+.logo, a, .p-comp, .projet a { transition-duration: 0.3s; }
+.logo:hover { background-image: url("./assets/picto/Logo-AL-developpement-web-blue.png"); }
+footer a:hover, header a:hover, .swiper-fleche:hover, .p-comp:hover, .projet a:hover { color: var(--secondary-color); }
 
 /* body */
 body{
@@ -213,7 +212,7 @@ header{
     height: 48px;
     width: 56px;
     margin-right: 16px;
-    background-image: var(--logo-header);
+    background-image: var(--logo);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -223,7 +222,7 @@ header{
   background-image: var(--picto);
   transition-duration: 0.3s;
 }
-.picto:hover{ background-image: url("./assets/sprite-blue.png");}
+.picto:hover{ background-image: url("./assets/picto/sprite-blue.png");}
 
 .p-localisation{
   background-position-x: 0;
@@ -246,7 +245,7 @@ header{
   background-image: var(--access);
 }
 .p-access-checked{
-  background-image: url("./assets/access-blue.png");
+  background-image: url("./assets/picto/access-blue.png");
 }
 .p-fleche{
   background-position-x: -160px;
@@ -341,19 +340,54 @@ header{
   transition-duration: 0.3s;
 }
 .swiper {
-  padding: 0 80px;
   margin-top: 60px;
   z-index: 0;
 }
-.projet, .projet-img{
+.swiper-wrapper { height: 650px;}
+
+.swiper-pagination-bullet { background-color: var(--color-text); }
+.swiper-pagination-bullet-active { background-color: var(--secondary-color);}
+
+/* double face slide */
+.swiper-slide {
   width: 350px;
+  height: 500px;
+  perspective: 1000px;
+  margin: auto 0;
 }
+.projet-img {height: 200px;}
 .projet-img img{
   width: 100%;
-  height: auto;
-  margin-top: 16px;
-  margin-bottom: 16px;
+  height: 100%;
+  object-fit: cover;
 }
+
+.card-inner {
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.999s;
+}
+
+.swiper-slide:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  transform: rotateY(0deg);
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
 
 /* A propos */
 
@@ -406,7 +440,7 @@ footer {
 .logo-footer{
   height: 122px;
   width: 140px;
-  background-image: var(--logo-footer);
+  background-image: var(--logo);
   background-size: contain;
   background-repeat: no-repeat;
 }

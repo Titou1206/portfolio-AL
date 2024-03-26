@@ -1,16 +1,22 @@
-{
-    "men sportwear": {
+[
+    {
         "titre": "Men Sportwear",
-        "image": "",
+        "image": "men-sportwear.jpg",
         "description": "M’S, fondée en 1993, est une boutique spécialisée dans les vêtements, chaussures et équipements de sport pour hommes. Leur objectif est de fournir des produits de qualité pour la pratique sportive en intérieur et en extérieur, en collaborant avec les grandes marques et en proposant leur propre gamme @utdoor, alliant confort, respirabilité et protection grâce à des matériaux innovants.",
-        "objectif": "Développement d'un site web conforme au design de M’S, incluant une page d'accueil statique, un template dynamique pour la catégorie 'chaussures - baskets', et un template statique pour les pages produits. Le site doit être responsive, optimisé pour le référencement et l'accessibilité. Maquettes, images et pictogrammes fournis. Possibilité d'ajouter des animations discrètes pour dynamiser le site. Collaboration avec l'équipe de design pour des ajustements.",
-        "pictos":{
-            "pic1": "p-html",
-            "pic2": "p-css",
-            "pic3": "p-js",
-            "pic4": "p-leaflet"
-        },
-        "librairies": "swiperjs",
+        "type": "Evaluation de fin de module front",
+        "pictos":["p-html", "p-css", "p-css", "p-js", "p-leaflet"],
+        "librairies": ["swiperjs"],
+        "objectif": "Développement d'un site web conforme au design de M’S, incluant une page d'accueil statique, un template dynamique pour la catégorie 'chaussures - baskets', et un template statique pour les pages produits. Le site doit être responsive, optimisé pour le référencement et l'accessibilité. Maquettes, images et pictogrammes fournis. Ajouter d'animations pour dynamiser le site.",
         "lien": "https://titou1206.github.io/Men_Sportswear/"
+    },
+    {
+        "titre": "Application Météo",
+        "image": "meteo-app.jpg",
+        "description": "Application web de prévision météorologique à 7 jour et heure par heure sur 24h avec précipitation, vent et fond d'écran interactif",
+        "type": "Projet personnel",
+        "pictos":["p-html", "p-css", "p-js"],
+        "librairies": [],
+        "objectif": "Prise en main du fonctionnement d'une API et d'une grid CSS",
+        "lien": "https://titou1206.github.io/Meteo/"
     }
-}
+]
