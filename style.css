@@ -118,13 +118,12 @@ h2 span, h1 span{
 h1, h2, h3{
     font-size: var(--font-size-t2);
 }
-h4, .para-about{
+h4 {
     font-size: var(--font-size-a);
 }
 p, a{
     font-size: var(--font-size-p);
 }
-.para-about { line-height: 28px;}
 
 
 /* h3 */
@@ -249,9 +248,6 @@ header{
 }
 .p-fleche{
   background-position-x: -160px;
-  position: absolute;
-  bottom: 60px;
-  left: 50%;
 }
 
 /* button dark/light mode */
@@ -331,6 +327,10 @@ header{
   padding: 8px 16px;
   border-radius: 10px;
   box-shadow: 2px 2px 5px 2px #29cacf4b;
+}
+.container-hero {
+  position: absolute;
+  bottom: 60px;
 }
 
 /* projets */

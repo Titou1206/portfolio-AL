@@ -82,6 +82,7 @@ const swiper = new Swiper('.swiper', {
         el: '.swiper-pagination',
     },
     slidesPerView: 1,
+    spaceBetween: 0,
     // Responsive breakpoints
     breakpoints: {
         // when window width is >= 830px
