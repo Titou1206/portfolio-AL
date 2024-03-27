@@ -81,32 +81,31 @@ const swiper = new Swiper('.swiper', {
     pagination: {
         el: '.swiper-pagination',
     },
+    width: 350,
     slidesPerView: 1,
-    spaceBetween: 0,
+    spaceBetween: 20,
     // Responsive breakpoints
     breakpoints: {
         // when window width is >= 830px
-        830: {
+        808: {
+            width: 740,
             slidesPerView: 2,
-            spaceBetween: 80
+            spaceBetween: 40
         },
         // when window width is >= 1260px
-        1260: {
+        1404: {
+            width: 1170,
             slidesPerView: 3,
-            spaceBetween: 80
+            spaceBetween: 60
         },
-        // when window width is >= 1690px
-        1690: {
-            slidesPerView: 4,
-            spaceBetween: 80
-        },
-        // when window width is >= 2120px
-        2120: {
+        // when window width is >= 1698px
+        1968: {
+            width: 1640,
             slidesPerView: 4,
             spaceBetween: 80
         }
-    }
-});
+    } 
+})
 
 
 /* projets dynamique */
@@ -128,22 +127,25 @@ function createSlide(projets){
         console.log(projet)
         let pics = recupPicto(projet.pictos)
         let libs = recupLib(projet.librairies)
-        swiper.innerHTML += `<div class="swiper-slide projet">
-        <div class="card-inner large-12">
-            <div class="card-front large-12">
+        swiper.innerHTML += `<div class="swiper-slide">
+        <div class="card-inner">
+            <div class="card-front">
                 <h4>${projet.titre}</h4>
-                <div class="projet-img mt32 large-12"><img src="./assets/captures-projets/${projet.image}" alt="copie d'écran du projet mntn"></div>
-                <p class="mt32 large-12">${projet.description}</p>
-                <p class="mt32 txt-end">...</p>
+                <div class="projet-img mt32"><img src="./assets/captures-projets/${projet.image}" alt="copie d'écran du projet mntn"></div>
+                <p class="mt32">${projet.description}</p>
+                <div class="flex justify-between mt32">
+                    <p>${projet.date}
+                    <p>...</p>        
+                </div>
             </div>
-            <div class="card-back large-12">
+            <div class="card-back">
                 <h4>${projet.type}</h4>
                 <div class="flex  gap16 mt32 align-center">
                     ${pics}
                     ${libs}
                 </div>
-                <p class="mt32 mb80 large-12">${projet.objectif}</p>
-                <a href="${projet.lien}">${projet.lien}</a>
+                <p class="mt32 mb80">${projet.objectif}</p>
+                <a target="_blank" href="${projet.lien}">${projet.lien}</a>
             </div>
         </div>
     </div>`

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio de Antoine LAUGIER | Développeur Web Créatif et Passionné</title>
     <meta name="description" content="Découvrez le portfolio de Antoine LAUGIER, un développeur web passionné avec une expertise dans la création de sites web modernes et performants. Explorez mes projets, mes compétences et découvrez comment je peux donner vie à vos idées en ligne.">
-    <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="./node_modules/leaflet/dist/leaflet.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/ico" href="./assets/Logo-AL-developpement-web-black.ico"/>
@@ -23,6 +23,7 @@
                     <li><a href="#hero"><div class="logo-menu logo logo-header curs-point"></div></a></li>
                     <li><a href="#projets">Projets</a></li>
                     <li><a href="#about">A propos</a></li>
+                    <li><a href="#services">Services</a></li>
                 </ul>
             </nav>
         </div>
@@ -79,9 +80,9 @@
                 <h3>Projets</h3>
             </div>
             <!-- swiper slider -->
-            <div id="swiper-projet" class="swiper large-12">
+            <div id="swiper-projet" class="swiper mrlauto">
                 <!-- Additional required wrapper -->
-                <div class="swiper-wrapper large-12">
+                <div class="swiper-wrapper">
                     <!-- Slides -->
                     <!-- intégration js 
                     <div class="swiper-slide projet">
@@ -110,7 +111,7 @@
                 </div>
                 <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
-            </div>
+            </div> 
         </section>      
         <!-- a propos -->
         <section class="about large-10 mrlauto mb160" id="about">
@@ -119,10 +120,48 @@
             <!-- div text et image -->
             <div class="container-about large-12 flex justify-between align-center mb80">
                 <div class="large-6">
-                    <p>Avec une expérience de 15 ans dans le commerce automobile et informatique, je me suis tourné vers le développement web. Diplômé en microélectronique et systèmes embarqués, ma passion pour la programmation a toujours été présente. Grâce à mes années dans le commerce, j'ai développé une certaine polyvalence technique et une compréhension des besoins des clients, que je souhaite mettre à profit dans le domaine du développement web.</p>
-                    <p class="mt16">Je suis conscient de mes compétences en programmation et de ma capacité d'adaptation, et je suis motivé à continuer à apprendre et à évoluer dans ce domaine en constante évolution. Mon objectif est de contribuer humblement à la création d'applications web fonctionnelles et conviviales, en utilisant mes compétences pour répondre aux besoins des utilisateurs de manière efficace et créative.</p>
+                    <p class="para-about">Avec une expérience de 15 ans dans le commerce automobile et informatique, je me suis tourné vers le développement web. Diplômé en microélectronique et systèmes embarqués, ma passion pour la programmation a toujours été présente. Grâce à mes années dans le commerce, j'ai développé une certaine polyvalence technique et une compréhension des besoins des clients, que je souhaite mettre à profit dans le domaine du développement web.</p>
+                    <p class="para-about mt32 mb80">Je suis conscient de mes compétences en programmation et de ma capacité d'adaptation, et je suis motivé à continuer à apprendre et à évoluer dans ce domaine en constante évolution. Mon objectif est de contribuer humblement à la création d'applications web fonctionnelles et conviviales, en utilisant mes compétences pour répondre aux besoins des utilisateurs de manière efficace et créative.</p>
+                    <!-- bouton CV -->
+                    <div class="container-bouton">
+                        <a class="bouton" target="_blank" href="./assets/CV_Antoine_LAUGIER_Développeur_Web.pdf" title="lien de téléchargement de mon CV au format PDF - Nouvelle fenêtre">Téléchargez mon CV</a>
+                    </div> 
+                </div>
+             
+                <div class="img-moi"><!-- <img src="./assets/img-moi.jpg" alt="Photo de moi en train de travailler"> --> </div>
+            </div>
+        </section>
+        <!-- services -->
+        <section class="services large-10 mrlauto mb160" id="services">
+            <!-- titre -->
+            <h3>Mes services</h3>
+            <div class="flex justify-around">
+                <div>
+                    <div class="mt32">
+                        <h4 class="text-center">Intégration Web</h4>
+                        <p class="mt8 text-center">Intégrations HTML et CSS respectueuses des standards du web</p>
+                    </div>
+                    <div class="mt32">
+                        <h4 class="text-center">Gestion de projet web</h4>
+                        <p class="mt8 text-center">Site vitrine, e-commerce, application web</p>
+                    </div>
+                    <div class="mt32">
+                        <h4 class="text-center">Référencement naturel</h4>
+                        <p class="mt8 text-center">Des pages propres en respectant la sémantique pour un référencement optimal</p>
+                    </div>
+                    <div class="mt32">
+                        <h4 class="text-center">Dynamisme des pages</h4>
+                        <p class="mt8 text-center">Animations subtiles et gestion dynamique du contenu</p>
+                    </div>
+                    <div class="mt32">
+                        <h4 class="text-center">Responsive design</h4>
+                        <p class="mt8 text-center">Compatibilité tout support (desktop, tablette  smartphone)</p>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="mrlauto img-services"><img src="./assets/image-service.png" alt="image de plusieurs écran"></div>
                     <div class="competence-container mb80">
-                        <div class=" flex gap32">
+                        <div class="justify-center flex gap32">
                             <div title="HTML" class="picto p-html"> </div>
                             <div title="CSS" class="picto p-css"> </div>
                             <div title="JavaScript" class="picto p-js"> </div>
@@ -131,12 +170,12 @@
                             <div title="Symfony" class="picto p-sf"> </div>
                             <div class="picto p-mysql"> </div>
                         </div>
-                        <div class="flex gap32 align-center mt32">
+                        <div class="justify-center flex gap32 align-center mt32">
                             <div class="picto p-leaflet"> </div>
                             <p class="p-comp">swiperjs</p>
                             <p class="p-comp">anime.js</p>
                         </div>
-                        <div class="flex gap32 align-center mt32">
+                        <div class="justify-center flex gap32 align-center mt32">
                             <div title="VScode" class="picto p-vs"> </div>
                             <div title="GitHub" class="picto p-github"> </div>
                             <div title="Filezilla" class="picto p-filezilla"> </div>
@@ -144,13 +183,7 @@
                             <div title="Notion" class="picto p-notion"> </div>
                         </div>
                     </div>
-                    <!-- bouton CV -->
-                    <div class="container-bouton">
-                        <a class="bouton" target="_blank" href="./assets/CV_Antoine_LAUGIER_Développeur_Web.pdf" title="lien de téléchargement de mon CV au format PDF - Nouvelle fenêtre">Téléchargez mon CV</a>
-                    </div> 
                 </div>
-             
-                <div class="img-moi"><!-- <img src="./assets/img-moi.jpg" alt="Photo de moi en train de travailler"> --> </div>
             </div>
         </section>
        
@@ -182,12 +215,13 @@
                         <li><a href="#hero">Accueil</a></li>
                         <li class="mt16"><a href="#projets">Projets</a></li>
                         <li class="mt16"><a href="#about">A propos</a></li>
+                        <li class="mt16"><a href="#services">Services</a></li>
                     </ul>
                 </nav>
             </div>
         </footer>
     </main>
-    <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
+    <script src="./node_modules/swiper/swiper-bundle.js"></script>
     <script src="./node_modules/leaflet/dist/leaflet.js"></script>  
     <script src="./app.js"></script>  
 </body>
