@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="librairies/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="librairies/leaflet/dist/leaflet.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" type="image/ico" href=/assets/Logo-AL-developpement-web-black.ico"/>
+    <link rel="shortcut icon" type="image/ico" href="assets/Logo-AL-developpement-web-black.ico">
 </head>
 <body data-theme="dark" data-style="normal">
     <!-- header -->
@@ -74,45 +74,149 @@
     <!-- main -->
     <main>
         <!-- portfolio -->
-        <section class="projets large-10 mrlauto" id="projets">
+        <section class="projets large-10 small-11 mrlauto" id="projets">
             <!-- titre -->
             <div class="large-12 mrlauto flex justify-center">
                 <h3># Projets</h3>
             </div>
 
-            <!-- swiper slider -->
-            <div id="swiper-projet" class="swiper mrlauto">
+
+            <!-- Slider main container -->
+            <div class="swiper">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <!-- intégration js 
-                    <div class="swiper-slide">
-                        <div class="card-inner">
-                            <div class="card-front">
-                                <h4 class="text-center">${projet.titre}</h4>
-                                <div class="projet-img mt32"><img src="assets/captures-projets/${projet.image}" alt="copie d'écran du projet mntn"></div>
-                                <p class="mt32">${projet.description}</p>
-                                <div class="flex justify-between mt32">
-                                    <p>${projet.date}
-                                    <p>...</p>        
-                                </div>
-                            </div>
-                            <div class="card-back">
-                                <h4>${projet.type}</h4>
-                                <div class="flex  gap16 mt32 align-center">
-                                    ${pics}
-                                    ${libs}
-                                </div>
-                                <p class="mt32 mb80">${projet.objectif}</p>
-                                <a target="_blank" href="${projet.lien}">${projet.lien}</a>
-                            </div>
-                        </div>
+                <!-- Slides -->
+                <!--  
+                <div class="swiper-slide"><div class="card-inner">
+                <div class="card-front">
+                    <h4 class="text-center">${projet.titre}</h4>
+                    <div class="projet-img mt32"><img src="assets/captures-projets/${projet.image}" alt="copie d'écran du projet mntn"></div>
+                    <p class="mt32">${projet.description}</p>
+                    <div class="flex justify-between mt32">
+                        <p>${projet.date}
+                        <p>...</p>        
                     </div>
-                    -->
+                </div>
+                <div class="card-back">
+                    <h4>${projet.type}</h4>
+                    <div class="flex  gap16 mt32 align-center">
+                        ${pics}
+                        ${libs}
+                    </div>
+                    <p class="mt32 mb80">${projet.objectif}</p>
+                    <a target="_blank" href="${projet.lien}">${projet.lien}</a>
+                </div>
+            </div></div>
+                <div class="swiper-slide"><div class="card-inner">
+                <div class="card-front">
+                    <h4 class="text-center">${projet.titre}</h4>
+                    <div class="projet-img mt32"><img src="assets/captures-projets/${projet.image}" alt="copie d'écran du projet mntn"></div>
+                    <p class="mt32">${projet.description}</p>
+                    <div class="flex justify-between mt32">
+                        <p>${projet.date}
+                        <p>...</p>        
+                    </div>
+                </div>
+                <div class="card-back">
+                    <h4>${projet.type}</h4>
+                    <div class="flex  gap16 mt32 align-center">
+                        ${pics}
+                        ${libs}
+                    </div>
+                    <p class="mt32 mb80">${projet.objectif}</p>
+                    <a target="_blank" href="${projet.lien}">${projet.lien}</a>
+                </div>
+            </div></div>
+                <div class="swiper-slide"><div class="card-inner">
+                <div class="card-front">
+                    <h4 class="text-center">${projet.titre}</h4>
+                    <div class="projet-img mt32"><img src="assets/captures-projets/${projet.image}" alt="copie d'écran du projet mntn"></div>
+                    <p class="mt32">${projet.description}</p>
+                    <div class="flex justify-between mt32">
+                        <p>${projet.date}
+                        <p>...</p>        
+                    </div>
+                </div>
+                <div class="card-back">
+                    <h4>${projet.type}</h4>
+                    <div class="flex  gap16 mt32 align-center">
+                        ${pics}
+                        ${libs}
+                    </div>
+                    <p class="mt32 mb80">${projet.objectif}</p>
+                    <a target="_blank" href="${projet.lien}">${projet.lien}</a>
+                </div>
+            </div></div>
+                <div class="swiper-slide"><div class="card-inner">
+                <div class="card-front">
+                    <h4 class="text-center">${projet.titre}</h4>
+                    <div class="projet-img mt32"><img src="assets/captures-projets/${projet.image}" alt="copie d'écran du projet mntn"></div>
+                    <p class="mt32">${projet.description}</p>
+                    <div class="flex justify-between mt32">
+                        <p>${projet.date}
+                        <p>...</p>        
+                    </div>
+                </div>
+                <div class="card-back">
+                    <h4>${projet.type}</h4>
+                    <div class="flex  gap16 mt32 align-center">
+                        ${pics}
+                        ${libs}
+                    </div>
+                    <p class="mt32 mb80">${projet.objectif}</p>
+                    <a target="_blank" href="${projet.lien}">${projet.lien}</a>
+                </div>
+            </div></div>
+                <div class="swiper-slide"><div class="card-inner">
+                <div class="card-front">
+                    <h4 class="text-center">${projet.titre}</h4>
+                    <div class="projet-img mt32"><img src="assets/captures-projets/${projet.image}" alt="copie d'écran du projet mntn"></div>
+                    <p class="mt32">${projet.description}</p>
+                    <div class="flex justify-between mt32">
+                        <p>${projet.date}
+                        <p>...</p>        
+                    </div>
+                </div>
+                <div class="card-back">
+                    <h4>${projet.type}</h4>
+                    <div class="flex  gap16 mt32 align-center">
+                        ${pics}
+                        ${libs}
+                    </div>
+                    <p class="mt32 mb80">${projet.objectif}</p>
+                    <a target="_blank" href="${projet.lien}">${projet.lien}</a>
+                </div>
+            </div></div>
+                <div class="swiper-slide"><div class="card-inner">
+                <div class="card-front">
+                    <h4 class="text-center">${projet.titre}</h4>
+                    <div class="projet-img mt32"><img src="assets/captures-projets/${projet.image}" alt="copie d'écran du projet mntn"></div>
+                    <p class="mt32">${projet.description}</p>
+                    <div class="flex justify-between mt32">
+                        <p>${projet.date}
+                        <p>...</p>        
+                    </div>
+                </div>
+                <div class="card-back">
+                    <h4>${projet.type}</h4>
+                    <div class="flex  gap16 mt32 align-center">
+                        ${pics}
+                        ${libs}
+                    </div>
+                    <p class="mt32 mb80">${projet.objectif}</p>
+                    <a target="_blank" href="${projet.lien}">${projet.lien}</a>
+                </div>
+            </div> --> </div> 
                 </div>
                 <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
-            </div> 
+            
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+          
+
         </section>      
         <!-- a propos -->
         <section class="about large-10 mrlauto mb160" id="about">
@@ -226,8 +330,8 @@
             </div>
         </footer>
     </main>
-    <script src="librairies/swiper/swiper-bundle.js"></script>
-    <script src="librairies/leaflet/dist/leaflet.js"></script>  
-    <script src="app.js"></script>  
+    <script src="librairies/swiper/swiper-bundle.js" defer></script>
+    <script src="librairies/leaflet/dist/leaflet.js" defer></script>
+    <script src="app.js" defer></script>  
 </body>
 </html>

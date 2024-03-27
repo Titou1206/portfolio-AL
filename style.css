@@ -336,45 +336,34 @@ header{
 }
 
 /* projets */
-.projets { margin-top: 160px;}
-.swiper-fleche { 
-  color: var(--color-text);
-  transition-duration: 0.3s;
-}
+.projets { margin-top: 10px;}
 .swiper {
-  margin-top: 60px;
-  z-index: 0;
+  /*width: 1200px;*/
+  height: 700px;
 }
-.swiper-wrapper { height: 650px;}
-
-.swiper-pagination-bullet { background-color: var(--color-text); }
-.swiper-pagination-bullet-active { background-color: var(--secondary-color);}
-
-/* double face slide */
-.swiper-slide {
+.swiper-slide{
   width: 350px;
-  height: 500px;
-  /*perspective: 1000px;*/
-  margin: auto 0;
+  height: 600px;
+  perspective: 1000px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
-
+.projet-img { 
+  width: 100%;
+  height: 170px;
+}
+.projet-img img { 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
 .card-inner {
   width: 100%;
   height: 100%;
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.999s;
-}
-
-.projet-img {
-  width: 100%;
-}
-
-.projet-img img{
-  width: 100%;
-  height: 170px;
-  object-fit: cover;
-  display: block;
 }
 
 .swiper-slide:hover .card-inner {
@@ -384,18 +373,22 @@ header{
 .card-front,
 .card-back {
   position: absolute;
+  width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  background-color: #29CACF;
+  padding: 8px;
 }
 
 .card-front {
+  border-radius: 10px;
   transform: rotateY(0deg);
 }
 
 .card-back {
+  border-radius: 10px;
   transform: rotateY(180deg);
 }
-
 
 /* A propos */
 

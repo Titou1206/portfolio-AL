@@ -72,41 +72,50 @@ function afficheMap(fondMap,iconCouleur){
     btnLeaflet.classList.add("d-none")
 }
 
-/* swiper */
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-    // If we need pagination
-    pagination: {
+function initSwiper(){
+    /* swiper init */
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+    
+        // If we need pagination
+        pagination: {
         el: '.swiper-pagination',
-    },
-    width: 350,
-    slidesPerView: 1,
-    spaceBetween: 20,
-    // Responsive breakpoints
-    breakpoints: {
-        // when window width is >= 830px
-        808: {
-            width: 740,
-            slidesPerView: 2,
-            spaceBetween: 40,
         },
-        // when window width is >= 1260px
-        1404: {
-            width: 1170,
-            slidesPerView: 3,
-            spaceBetween: 60,
+    
+        // Navigation arrows
+        navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
         },
-        // when window width is >= 1698px
-        1968: {
-            width: 1640,
-            slidesPerView: 4,
-            spaceBetween: 80,
-        },
-    } ,
-})
-
+        // Default parameters
+        width: 300,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        // Responsive breakpoints
+        breakpoints: {
+            // when window width is >= 320px
+            700: {
+                width: 620,
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            // when window width is >= 480px
+            1300: {
+                width: 960,
+                slidesPerView: 3,
+                spaceBetween: 30
+            },
+            // when window width is >= 640px
+            1600: {
+                width: 1320,
+                slidesPerView: 4,
+                spaceBetween: 40
+            }
+        }
+    });
+}
 
 /* projets dynamique */
 fetch("projets.json")
@@ -115,6 +124,7 @@ fetch("projets.json")
 })
 .then(projets=>{
     createSlide(projets)
+    initSwiper()
 })
 
 function createSlide(projets){
