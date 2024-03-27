@@ -60,7 +60,7 @@ let fondMap = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}
 
 function afficheMap(fondMap,iconCouleur){
     var myIcon = L.icon({
-        iconUrl: `./assets/picto/Logo-AL-developpement-web-${iconCouleur}.png`,
+        iconUrl: `assets/picto/Logo-AL-developpement-web-${iconCouleur}.png`,
         iconSize: [38, 38],
         iconAnchor: [16, 16],
     });
@@ -90,26 +90,26 @@ const swiper = new Swiper('.swiper', {
         808: {
             width: 740,
             slidesPerView: 2,
-            spaceBetween: 40
+            spaceBetween: 40,
         },
         // when window width is >= 1260px
         1404: {
             width: 1170,
             slidesPerView: 3,
-            spaceBetween: 60
+            spaceBetween: 60,
         },
         // when window width is >= 1698px
         1968: {
             width: 1640,
             slidesPerView: 4,
-            spaceBetween: 80
-        }
-    } 
+            spaceBetween: 80,
+        },
+    } ,
 })
 
 
 /* projets dynamique */
-fetch("./projets.json")
+fetch("projets.json")
 .then(ret=>{
     return ret.json()
 })
@@ -128,27 +128,27 @@ function createSlide(projets){
         let pics = recupPicto(projet.pictos)
         let libs = recupLib(projet.librairies)
         swiper.innerHTML += `<div class="swiper-slide">
-        <div class="card-inner">
-            <div class="card-front">
-                <h4>${projet.titre}</h4>
-                <div class="projet-img mt32"><img src="./assets/captures-projets/${projet.image}" alt="copie d'écran du projet mntn"></div>
-                <p class="mt32">${projet.description}</p>
-                <div class="flex justify-between mt32">
-                    <p>${projet.date}
-                    <p>...</p>        
+            <div class="card-inner">
+                <div class="card-front">
+                    <h4 class="text-center">${projet.titre}</h4>
+                    <div class="projet-img mt32"><img src="assets/captures-projets/${projet.image}" alt="copie d'écran du projet mntn"></div>
+                    <p class="mt32">${projet.description}</p>
+                    <div class="flex justify-between mt32">
+                        <p>${projet.date}
+                        <p>...</p>        
+                    </div>
+                </div>
+                <div class="card-back">
+                    <h4>${projet.type}</h4>
+                    <div class="flex  gap16 mt32 align-center">
+                        ${pics}
+                        ${libs}
+                    </div>
+                    <p class="mt32 mb80">${projet.objectif}</p>
+                    <a target="_blank" href="${projet.lien}">${projet.lien}</a>
                 </div>
             </div>
-            <div class="card-back">
-                <h4>${projet.type}</h4>
-                <div class="flex  gap16 mt32 align-center">
-                    ${pics}
-                    ${libs}
-                </div>
-                <p class="mt32 mb80">${projet.objectif}</p>
-                <a target="_blank" href="${projet.lien}">${projet.lien}</a>
-            </div>
-        </div>
-    </div>`
+        </div>`
     });
 }
 
@@ -173,3 +173,11 @@ function recupLib(elements){
         })
         return elts
     }
+
+
+
+    /*
+
+    
+
+        */
