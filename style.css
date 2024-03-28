@@ -67,7 +67,7 @@ li{
   --logo: url("assets/picto/Logo-AL-developpement-web-black.png");
   --picto: url("assets/picto/sprite-black.png");
   --access: url("assets/picto/access-black.png");
-  --banniere: linear-gradient(rgba(217, 217, 217, 0) 80%, rgb(217, 217, 217) 100%), url("assets/banniere-developpeur-web.jpg");
+  --banniere: linear-gradient(rgba(217, 217, 217, 0.5) 0%,rgba(217, 217, 217, 0.5) 80%, rgb(217, 217, 217) 100%), url("assets/banniere-developpeur-web.jpg");
   --img-about: url("assets/about/img-about-light.jpg");
   --img-services: url("assets/services/image-service-dark.png");
 }
@@ -639,11 +639,11 @@ les resolutions d'ecrans*/
 
     footer{flex-direction: column; justify-content: center; gap: 32px;}
     .footer-droit ul { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 16px;}
-    
+    .footer-gauche{ justify-content: center;}
   }
 
   @media screen and (min-width: 576px) and (max-width: 1025px) {
-    .footer-gauche{ flex-direction: row-reverse; justify-content: space-between; margin-bottom: 40px;};
+    .footer-gauche{ justify-content: space-between; margin-bottom: 40px;};
   }
 
   @media screen and (max-width: 1025px) {

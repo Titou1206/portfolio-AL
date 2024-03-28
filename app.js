@@ -29,6 +29,7 @@ function afficheMenu(){
 	burgerBottom.classList.toggle("bottom-check")
 }
 
+
 // Dark mode
 // récupération du body
 let body = document.querySelector("body")
@@ -75,13 +76,13 @@ switchAccess.addEventListener("change",(e)=>{
 
 // librairie leaflet - on affiche la carte
 var map = L.map('map').setView([45.440138, 4.387329], 8);
-
+/*
 var Stadia_AlidadeSmooth = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
     minZoom: 0,
     maxZoom: 20,
 })
 let iconCouleur = "black"
-afficheMap(Stadia_AlidadeSmooth, iconCouleur)
+afficheMap(Stadia_AlidadeSmooth, iconCouleur)*/
 
 function afficheMap(fondMap,iconCouleur){
     var myIcon = L.icon({
@@ -194,4 +195,31 @@ function recupLib(elements){
             elts += `<p class="p-comp">${element}</p>`
         })
         return elts
+    }
+
+
+
+    //dark mode test
+    function isDarkMode(){
+        return globalThis.matchMedia?.("(prefers-color-scheme.dark)").matches ?? false;
+    }
+    let checkbox = document.getElementById("switch-mode")
+    if(isDarkMode()){
+        body.setAttribute("data-theme","dark")
+        checkbox.checked = false
+        var Stadia_AlidadeSmooth = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
+            minZoom: 0,
+            maxZoom: 20,
+        })
+        let iconCouleur = "black"
+        afficheMap(Stadia_AlidadeSmooth, iconCouleur)
+    }else{
+        body.setAttribute("data-theme","light")
+        checkbox.checked = true
+        var Stadia_AlidadeSmoothDark = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+            minZoom: 0,
+            maxZoom: 20,
+        })
+        let iconCouleur = "white"
+        afficheMap(Stadia_AlidadeSmoothDark, iconCouleur)
     }
