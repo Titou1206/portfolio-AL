@@ -43,17 +43,29 @@ colorMode.addEventListener("change",(e)=>{
         var Stadia_AlidadeSmoothDark = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
             minZoom: 0,
             maxZoom: 20,
-        })
-        let iconCouleur = "white"
-        afficheMap(Stadia_AlidadeSmoothDark, iconCouleur)
+        }).addTo(map)
+        //let iconCouleur = "white"
+        //afficheMap(Stadia_AlidadeSmoothDark, iconCouleur)
+        var myIcon = L.icon({
+            iconUrl: `assets/picto/Logo-AL-developpement-web-white.png`,
+            iconSize: [38, 38],
+            iconAnchor: [16, 16],
+        });
+        L.marker([45.251463, 4.214260], {icon: myIcon}).addTo(map)
     }else{
         body.setAttribute("data-theme","dark")
         var Stadia_AlidadeSmooth = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
             minZoom: 0,
             maxZoom: 20,
-        })
-        let iconCouleur = "black"
-        afficheMap(Stadia_AlidadeSmooth, iconCouleur)
+        }).addTo(map)
+        //let iconCouleur = "black"
+        //afficheMap(Stadia_AlidadeSmooth, iconCouleur)
+        var myIcon = L.icon({
+            iconUrl: `assets/picto/Logo-AL-developpement-web-black.png`,
+            iconSize: [38, 38],
+            iconAnchor: [16, 16],
+        });
+        L.marker([45.251463, 4.214260], {icon: myIcon}).addTo(map)
     }
 })
 
@@ -90,8 +102,8 @@ function afficheMap(fondMap,iconCouleur){
         iconSize: [38, 38],
         iconAnchor: [16, 16],
     });
-    fondMap.addTo(map);
     L.marker([45.251463, 4.214260], {icon: myIcon}).addTo(map)
+    fondMap.addTo(map);
 }
 
 
@@ -210,16 +222,28 @@ function recupLib(elements){
         var Stadia_AlidadeSmooth = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
             minZoom: 0,
             maxZoom: 20,
-        })
-        let iconCouleur = "black"
-        afficheMap(Stadia_AlidadeSmooth, iconCouleur)
+        }).addTo(map)
+        //let iconCouleur = "black"
+        //afficheMap(Stadia_AlidadeSmooth, iconCouleur)
+        var myIcon = L.icon({
+            iconUrl: `assets/picto/Logo-AL-developpement-web-black.png`,
+            iconSize: [38, 38],
+            iconAnchor: [16, 16],
+        });
+        L.marker([45.251463, 4.214260], {icon: myIcon}).addTo(map)
     }else{
         body.setAttribute("data-theme","light")
         checkbox.checked = true
         var Stadia_AlidadeSmoothDark = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
             minZoom: 0,
             maxZoom: 20,
-        })
-        let iconCouleur = "white"
-        afficheMap(Stadia_AlidadeSmoothDark, iconCouleur)
+        }).addTo(map)
+        //let iconCouleur = "black"
+        //afficheMap(Stadia_AlidadeSmooth, iconCouleur)
+        var myIcon = L.icon({
+            iconUrl: `assets/picto/Logo-AL-developpement-web-white.png`,
+            iconSize: [38, 38],
+            iconAnchor: [16, 16],
+        });
+        L.marker([45.251463, 4.214260], {icon: myIcon}).addTo(map)
     }
