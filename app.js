@@ -39,21 +39,17 @@ colorMode.addEventListener("change",(e)=>{
     // on change l'attribut data-theme en light ou dark en fonction de l'état
     if(colorMode.checked){
         body.setAttribute("data-theme","light")
-        var Stadia_AlidadeSmoothDark = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.{ext}', {
+        var Stadia_AlidadeSmoothDark = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
             minZoom: 0,
             maxZoom: 20,
-            attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-            ext: 'png'
         })
         let iconCouleur = "white"
         afficheMap(Stadia_AlidadeSmoothDark, iconCouleur)
     }else{
         body.setAttribute("data-theme","dark")
-        var Stadia_AlidadeSmooth = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.{ext}', {
+        var Stadia_AlidadeSmooth = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
             minZoom: 0,
             maxZoom: 20,
-            attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-            ext: 'png'
         })
         let iconCouleur = "black"
         afficheMap(Stadia_AlidadeSmooth, iconCouleur)
@@ -80,11 +76,9 @@ switchAccess.addEventListener("change",(e)=>{
 // librairie leaflet - on affiche la carte
 var map = L.map('map').setView([45.440138, 4.387329], 8);
 
-var Stadia_AlidadeSmooth = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.{ext}', {
+var Stadia_AlidadeSmooth = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
     minZoom: 0,
     maxZoom: 20,
-    attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    ext: 'png'
 })
 let iconCouleur = "black"
 afficheMap(Stadia_AlidadeSmooth, iconCouleur)
@@ -97,10 +91,6 @@ function afficheMap(fondMap,iconCouleur){
     });
     fondMap.addTo(map);
     L.marker([45.251463, 4.214260], {icon: myIcon}).addTo(map)
-    let barreLeaflet = document.querySelector(".leaflet-control-attribution")
-    barreLeaflet.classList.add("d-none")
-    let btnLeaflet = document.querySelector(".leaflet-control-zoom")
-    btnLeaflet.classList.add("d-none")
 }
 
 

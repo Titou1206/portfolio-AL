@@ -452,6 +452,8 @@ footer {
   height: 200px;
   border-radius: 10px;
 }
+.leaflet-control-attribution, .leaflet-control-zoom {display: none;}
+
 .logo-footer{
   height: 122px;
   width: 140px;
