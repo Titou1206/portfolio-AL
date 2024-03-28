@@ -134,7 +134,7 @@ h3{
     border-bottom: solid 5px var(--secondary-color);
     width: fit-content;
     margin-top: 160px;
-    margin-bottom: 60px;
+    margin-bottom: 120px;
 }
 
 /* Display */
@@ -341,8 +341,8 @@ header{
   height: 700px;
 }
 .swiper-slide{
-  width: 400px;
-  height: 600px;
+  width: 320px !important;
+  height: 550px;
   perspective: 1000px;
   margin-top: auto;
   margin-bottom: auto;
@@ -355,11 +355,11 @@ header{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10px;
 }
 .card-inner {
   width: 100%;
   height: 100%;
+  perspective: 1000px;
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.999s;
@@ -375,8 +375,11 @@ header{
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  background-color: #29CACF;
-  padding: 8px;
+  padding: 16px 0;
+  background: rgba(41, 202, 207, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15px);
 }
 
 .card-front {
@@ -443,10 +446,11 @@ footer {
   padding: 60px 0;
   border-top: solid 1px var(--tertiary-color);
 }
+.footer-gauche {gap: 32px;}
 #map {
-  width: 250px;
-  height: 250px;
-  margin-right: 32px;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
 }
 .logo-footer{
   height: 122px;
@@ -577,5 +581,143 @@ les resolutions d'ecrans*/
     }
     .small-12 {
       width: calc(100% - 0 * var(--gutter) / 1);
+    }
+  }
+
+  @media screen and (min-width: 1400px) and (max-width: 1600px) {
+    .container-about, .container-services { justify-content: space-between;}
+    .about-desc { width: 50%;}
+    .img-moi{ width: 500px;height: 500px;}
+    
+  }
+  @media screen and (max-width: 1400px) {
+    .container-about{margin-bottom: 0;}
+    .about-desc {width: 80%;}
+    .img-comp-serv, .img-moi{margin-top: 60px;}
+  }
+  @media screen and (min-width: 1026px) and (max-width: 1400px) {
+    .container-services {flex-direction: column;}
+  }
+
+  @media screen and (max-width: 575px) {
+    [data-style="access"]{
+      --font-fam-t1: "Luciole";
+      --font-fam-t2: "Luciole";
+      --font-fam-a: "Luciole";
+      --font-fam-p: "Luciole";
+      --font-size-t1: 28px;
+      --font-size-t2: 24px;
+      --font-size-t3: 22px;
+      --font-size-a: 18px;
+      --font-size-p: 16px;
+    }
+    [data-style="normal"]{
+      --font-fam-t1: "Anton", sans-serif;
+      --font-fam-t2: "Roboto", sans-serif;
+      --font-fam-a: "Roboto", sans-serif;
+      --font-fam-p: "Cardo", serif;
+      --font-size-t1: 36px;
+      --font-size-t2: 32px;
+      --font-size-t3: 22px;
+      --font-size-a: 16px;
+      --font-size-p: 12px;
+    }
+
+    
+    h3{margin-top: 80px; margin-bottom: 40px;}
+
+    
+    .img-moi{ width: 300px;height: 300px;}
+    .services{margin-bottom: 80px;}
+
+    .img-services {
+      width: 300px;
+      height: 170px;
+    }
+
+    footer{flex-direction: column; justify-content: center; gap: 32px;}
+    .footer-droit ul { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 16px;}
+    
+  }
+
+  @media screen and (min-width: 576px) and (max-width: 1025px) {
+    .footer-gauche{ flex-direction: row-reverse; justify-content: space-between; margin-bottom: 40px;};
+  }
+
+  @media screen and (max-width: 1025px) {
+    h1{margin-top: 80px;}
+    .container-btn-hero{ flex-direction: column-reverse; gap: 60px; align-items: center;}
+    
+
+
+    /* header */
+    .menu {
+      display: block;
+      position: fixed;
+      top: 80px;
+      right: 0;
+      width: 150px;
+      padding: 8px;
+      height: calc(100vh - 80px);
+      backdrop-filter: blur(12px);
+      transform: translateX(200px);
+      transition: transform 0.6s linear;
+    }
+    .menu>div { flex-direction: column; align-items: center; }
+
+    .menu-ouvert { transform: translateX(0);}
+    .hero, main, footer { transition: filter 0.6s linear; }
+    .blur2 { filter: blur(5px); opacity: 0.2; }
+
+    .menu nav ul {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 32px;
+    }
+    .menu li { margin-top: 16px; }
+    .logo-menu { display: none; }
+    .logo-burger { display: block; }
+    .burger {
+      display: block;
+      position: relative;
+      cursor: pointer;
+      width: 50px;
+      height: 40px;
+    }
+    .burger span {
+      position: absolute;
+      width: 45px;
+      height: 7px;
+      background: var(--color-text);
+      border-radius: 100px;
+      display: inline-block;
+      transition: 0.3s ease;
+      left: 0;
+    }
+    .burger-span
+    .burger span.top {
+      top: 0;
+    }    
+    .burger span.middle {
+      top: 17px;
+    }   
+    .burger span.bottom {
+      bottom: 0;
+    }
+    .top-check {
+      transform: rotate(45deg);
+      transform-origin: top left;
+      top: 2px;
+      left: 5px;
+    }
+    .bottom-check {
+      transform: rotate(-45deg);
+      transform-origin: bottom left;
+      bottom: -2px;
+      left: 5px;
+    }
+    .middle-check {
+      transform: translateX(-20px);
+      opacity: 0;
     }
   }

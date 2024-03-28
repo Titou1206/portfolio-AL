@@ -14,57 +14,68 @@
     <!-- header -->
     <header class="large-12 flex align-center justify-between">
         <!-- picto a afficher format smartphone -->
-        <a href="#hero" class="d-none"><div class="logo-burger logo logo-header curs-point"></div></a>
-        <!-- header gauche -->
-        <div class="flex align-center gap16">
-            <!-- nav -->
-            <nav class="pages">
-                <ul class="flex align-center gap16">
-                    <li><a href="#hero"><div class="logo-menu logo logo-header curs-point"></div></a></li>
-                    <li><a href="#projets"># Projets</a></li>
-                    <li><a href="#about"># A propos</a></li>
-                    <li><a href="#services"># Services</a></li>
-                </ul>
-            </nav>
-        </div>
-        <!-- header droit -->
-        <div class="flex align-center justify-end gap16">
-            <!-- nav reseaux / contact -->
-            <nav class="reseaux">
-                <ul class="flex align-center gap16">
-                    <li><a class="curs-point" href="tel:+33666529277" title="lien pour m'appeler"><div class="picto p-phone"></div></a></li>
-                    <li><a class="curs-point" href="mailto:laugierantoine@gmail.com" title="lien pour m'envoyer un mail"><div  class="picto p-mail"></div></a></li>
-                    <li><a target="_blank"  class="curs-point" href="https://www.linkedin.com/in/antoine-laugier/" title="lien vers ma page linkedIn - Nouvelle fenêtre"><div class="picto p-linkedin "></div></a></li>
-                    <li><a target="_blank"  class="curs-point" href="https://github.com/Titou1206" title="lien vers ma page GitHub - Nouvelle fenêtre"><div class="picto p-github"></div></a></li>         
-                </ul>
-            </nav>
-            <!-- switch dark/light -->
-            <div class="switch-mode">
-                <label class="switch-label">
-                <input type="checkbox" class="checkbox" id="switch-mode" name="switch-mode">
-                <span class="slider"></span>
-                </label>
-            </div>
-            <!-- switch access -->
-            <label for="switch-access">
-                <div id="button-access" class="p-access curs-point">
-                    <input type="checkbox" class="checkbox" id="switch-access" name="switch-access">
-                </div>
-            </label> 
-        </div>
+        <a href="#hero" class="d-none logo-burger"><div class="logo logo-header curs-point"></div></a>
         <!-- burger a afficher au format smartphone -->
-        <div class="burger d-none"></div>
+        <div class="burger d-none">
+            <span class="top"></span>
+            <span class="middle"></span>
+            <span class="bottom"></span>
+        </div>
+        <!-- menu -->
+        <div class="menu large-12">
+            <div class="flex justify-between align-center large-12">
+                <!-- header gauche -->
+                <div class="flex align-center gap16">
+                    <!-- nav -->
+                    <nav class="pages">
+                        <ul class="flex align-center gap16">
+                            <li class="logo-menu"><a href="#hero"><div class="logo logo-header curs-point"></div></a></li>
+                            <li><a href="#projets"># Projets</a></li>
+                            <li><a href="#about"># A propos</a></li>
+                            <li><a href="#services"># Services</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- header droit -->
+                <div class="flex align-center justify-end gap16">
+                    <!-- nav reseaux / contact -->
+                    <nav class="reseaux">
+                        <ul class="flex align-center gap16">
+                            <li><a class="curs-point" href="tel:+33666529277" title="lien pour m'appeler"><div class="picto p-phone"></div></a></li>
+                            <li><a class="curs-point" href="mailto:laugierantoine@gmail.com" title="lien pour m'envoyer un mail"><div  class="picto p-mail"></div></a></li>
+                            <li><a target="_blank"  class="curs-point" href="https://www.linkedin.com/in/antoine-laugier/" title="lien vers ma page linkedIn - Nouvelle fenêtre"><div class="picto p-linkedin "></div></a></li>
+                            <li><a target="_blank"  class="curs-point" href="https://github.com/Titou1206" title="lien vers ma page GitHub - Nouvelle fenêtre"><div class="picto p-github"></div></a></li>    
+                            <li>
+                                <label for="switch-access">
+                                <div id="button-access" class="p-access curs-point">
+                                    <input type="checkbox" class="checkbox" id="switch-access" name="switch-access">
+                                </div>
+                                </label>
+                            </li> 
+                            <li>
+                                <div class="switch-mode">
+                                    <label class="switch-label">
+                                    <input type="checkbox" class="checkbox" id="switch-mode" name="switch-mode">
+                                    <span class="slider"></span>
+                                    </label>
+                                </div>
+                            </li>    
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
     </header>
     <!-- hero -->
-    <section id="hero" class="hero large-12 flex">
+    <section id="hero" class="hero large-12 flex menu-blur">
         <!-- div titre -->
-        <div class="large-10 flex justify-around mrlauto">
-            <h2>Antoine<br><span>LAUGIER</span></h2>
+        <div class="large-10 small-11 flex justify-around mrlauto">
+            <h2 class="text-center">Antoine<br><span>LAUGIER</span></h2>
             <h1 class="text-center"><span>< Developpeur Web ></span><br>// Full Stack</h1>
         </div>
         <!-- bouton CV -->
         <div class="large-12">
-            <div class="large-10 flex justify-around mrlauto">
+            <div class="container-btn-hero large-10 small-11 flex justify-around mrlauto">
                 <!-- picto scroll -->
                 <div class="picto p-fleche"></div>
                 <a class="bouton" target="_blank" href="assets/CV_Antoine_LAUGIER_Développeur_Web.pdf" title="lien de téléchargement de mon CV au format PDF - Nouvelle fenêtre">Téléchargez mon CV</a>
@@ -74,7 +85,7 @@
     <!-- main -->
     <main>
         <!-- portfolio -->
-        <section class="projets large-10 small-11 mrlauto" id="projets">
+        <section class="projets large-10 small-11 mrlauto menu-blur" id="projets">
             <!-- titre -->
             <div class="large-12 mrlauto flex justify-center">
                 <h3># Projets</h3>
@@ -82,11 +93,11 @@
 
 
             <!-- Slider main container -->
-            <div class="swiper">
+            <div class="swiper mrlauto">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                 <!-- Slides -->
-                <!--  
+                  <!--  
                 <div class="swiper-slide"><div class="card-inner">
                 <div class="card-front">
                     <h4 class="text-center">${projet.titre}</h4>
@@ -208,25 +219,19 @@
                 </div>
             </div> --> </div> 
                 </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-            
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
             </div>
           
 
         </section>      
         <!-- a propos -->
-        <section class="about large-10 mrlauto mb160" id="about">
+        <section class="about large-10 mrlauto mb160 menu-blur" id="about">
             <!-- titre -->
             <div class="large-12 mrlauto flex justify-center">
                 <h3># A propos de moi</h3>
             </div>
             <!-- div text et image -->
             <div class="container-about large-12 flex justify-around align-center mb80">
-                <div class="large-6">
+                <div class="about-desc large-5 medium-10 small-11">
                     <p class="para-about">Avec une expérience de 15 ans dans le commerce automobile et informatique, je me suis tourné vers le développement web. Diplômé en microélectronique et systèmes embarqués, ma passion pour la programmation a toujours été présente. Grâce à mes années dans le commerce, j'ai développé une certaine polyvalence technique et une compréhension des besoins des clients, que je souhaite mettre à profit dans le domaine du développement web.</p>
                     <p class="para-about mt32 mb80">Je suis conscient de mes compétences en programmation et de ma capacité d'adaptation, et je suis motivé à continuer à apprendre et à évoluer dans ce domaine en constante évolution. Mon objectif est de contribuer humblement à la création d'applications web fonctionnelles et conviviales, en utilisant mes compétences pour répondre aux besoins des utilisateurs de manière efficace et créative.</p>
                     <!-- bouton CV -->
@@ -239,12 +244,12 @@
             </div>
         </section>
         <!-- services -->
-        <section class="services large-10 mrlauto mb160" id="services">
+        <section class="services large-10 mrlauto mb160 menu-blur" id="services">
             <!-- titre -->
             <div class="large-12 mrlauto flex justify-center">
                 <h3># Mes services</h3>
             </div>
-            <div class="flex justify-around">
+            <div class="container-services flex justify-around">
                 <div>
                     <div class="mt32">
                         <h4 class="text-center">Intégration Web</h4>
@@ -267,7 +272,7 @@
                         <p class="mt8 text-center">Compatibilité tout support (desktop, tablette  smartphone)</p>
                     </div>
                 </div>
-                <div class="">
+                <div class="img-comp-serv">
                     <div class="mrlauto img-services"></div>
                     <div class="competence-container mb80">
                         <div class="justify-center flex gap32">
@@ -297,15 +302,15 @@
         </section>
        
         <!-- footer -->
-        <footer class="flex large-10 justify-between align-center mrlauto">
+        <footer class="flex large-10 medium-10 small-11 justify-between align-center mrlauto menu-blur">
             <!-- footer gauche -->
-            <div class="footer-gauche flex">
-                <!-- map -->
-                <div id="map"></div>
+            <div class="footer-gauche flex medium-12">
                 <div class="aldev flex justify-center align-center">
                     <a href="#hero"><div class="logo-footer logo curs-point"></div></a>
                     <h4 class="mt16 text-center">Antoine LAUGIER<br>Developpement Web</h4>
                 </div>
+                <!-- map -->
+                <div id="map"></div>
             </div>
             <!-- footer centre -->
             <div class="footer-centre">
@@ -321,12 +326,15 @@
             <div class="footer-droit">
                 <nav>
                     <ul>
-                        <li><a href="#hero"># Accueil</a></li>
+                        <li class="mt16"><a href="#hero"># Accueil</a></li>
                         <li class="mt16"><a href="#projets"># Projets</a></li>
                         <li class="mt16"><a href="#about"># A propos</a></li>
                         <li class="mt16"><a href="#services"># Services</a></li>
                     </ul>
                 </nav>
+            </div>
+            <div class="large-12 mt32">
+                <p class="mention text-center">Mentions légales</p>
             </div>
         </footer>
     </main>
