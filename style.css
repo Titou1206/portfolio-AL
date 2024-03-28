@@ -338,11 +338,10 @@ header{
 /* projets */
 .projets { margin-top: 10px;}
 .swiper {
-  /*width: 1200px;*/
   height: 700px;
 }
 .swiper-slide{
-  width: 350px;
+  width: 400px;
   height: 600px;
   perspective: 1000px;
   margin-top: auto;

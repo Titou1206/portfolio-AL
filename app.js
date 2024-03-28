@@ -95,26 +95,26 @@ function initSwiper(){
         prevEl: '.swiper-button-prev',
         },
         // Default parameters
-        width: 300,
+        width: 320,
         slidesPerView: 1,
         spaceBetween: 20,
         // Responsive breakpoints
         breakpoints: {
             // when window width is >= 320px
-            700: {
-                width: 620,
+            750: {
+                width: 660,
                 slidesPerView: 2,
                 spaceBetween: 20
             },
             // when window width is >= 480px
             1300: {
-                width: 960,
+                width: 1050,
                 slidesPerView: 3,
                 spaceBetween: 30
             },
             // when window width is >= 640px
-            1600: {
-                width: 1320,
+            1700: {
+                width: 1400,
                 slidesPerView: 4,
                 spaceBetween: 40
             }
