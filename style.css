@@ -114,7 +114,7 @@ p{
 }
 
 /* taille */
-h2 span, h1 span{
+.span-maj{
     font-size: var(--font-size-t1);
 }
 h1, h2, h3{
@@ -197,6 +197,8 @@ h3{
 .logo, a, .p-comp, .projet a, .services h4 { transition-duration: 0.3s; }
 .logo:hover { background-image: url("assets/picto/Logo-AL-developpement-web-blue.png"); }
 .services h4:hover, footer a:hover, header a:hover, .swiper-fleche:hover, .p-comp:hover, .swiper a:hover { color: var(--secondary-color); }
+
+
 
 /* body */
 body{
@@ -328,6 +330,9 @@ header{
   align-content: space-between;
   padding: 180px 0 90px 0;
 }
+
+.span-blue {color: var(--secondary-color);}
+
 .bouton{
   background-color: var(--secondary-color);
   padding: 8px 16px;

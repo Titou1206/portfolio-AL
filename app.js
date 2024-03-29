@@ -58,10 +58,7 @@ function initSwiper(){
     const swiper = new Swiper('.swiper', {
         // Optional parameters
         direction: 'horizontal',
-        loop: true,
-        autoplay: {
-            delay: 5000,
-          },
+        loop: false,
         // Default parameters
         slidesPerView: 1,
         spaceBetween: 20,
@@ -91,10 +88,10 @@ fetch("projets.json")
 .then(ret=>{
     return ret.json()
 })
-.then(projets=>{
-    createSlide(projets)
+.then(projets=>{createSlide(projets)
     initSwiper()
 })
+
 
 function createSlide(projets){
 // Role : crée les slides projet dans le swiper
@@ -133,6 +130,7 @@ function createSlide(projets){
         </div>`
     });
 }
+
 
 function recupPicto(elements){
 // parcours : les elements d'un projet pour les mettre dans une chaine de caractère

@@ -1,27 +1,5 @@
 [
     {
-        "titre": "Men Sportswear",
-        "image": "men-sportwear.jpg",
-        "description": "M’S est une boutique spécialisée dans les vêtements, chaussures et équipements de sport pour hommes. Collaborant avec les grandes marques et proposant leur propre gamme @utdoor.",
-        "type": "Evaluation de fin de module front",
-        "date": "18-03-2024",
-        "pictos":["p-html", "p-css", "p-css", "p-js", "p-leaflet"],
-        "librairies": ["swiperjs"],
-        "objectif": "Développement d'un site web incluant une page d'accueil et un template 'détail produits' statiques, un template dynamique pour la catégorie 'chaussures - baskets'. Le site doit être responsive, optimisé pour le référencement et l'accessibilité. Maquettes, images et pictogrammes fournis.",
-        "lien": "https://titou1206.github.io/M_S/"
-    },
-    {
-        "titre": "Application Météo",
-        "image": "meteo-app.jpg",
-        "description": "Application web de prévision météorologique à 7 jour et heure par heure sur 24h avec précipitation, vent et fond d'écran interactif",
-        "type": "Projet personnel",
-        "date": "27-02-2024",
-        "pictos":["p-html", "p-css", "p-js"],
-        "librairies": [],
-        "objectif": "Prise en main du fonctionnement d'une API et d'une grid CSS",
-        "lien": "https://titou1206.github.io/Meteo/"
-    },
-    {
         "titre": "La Ruche",
         "image": "ruche.jpg",
         "description": "Site vitrine d'un producteur de miel",
@@ -33,15 +11,26 @@
         "lien": "https://titou1206.github.io/Ruche/"
     },
     {
-        "titre": "Dehors",
-        "image": "dehors.jpg",
-        "description": "Site vitrine d'un Escape game au coeur de Paris",
-        "type": "Projet de milieu de module front",
-        "date": "29-02-2024",
+        "titre": "MNTN",
+        "image": "mntn.jpg",
+        "description": "Découvrez 'Moto Manga Tales', une expérience interactive où votre passion pour les motos et les mangas se fusionne dans des aventures épiques, vous permettant de créer votre propre légende de motard ou de motarde manga !",
+        "type": "Evaluation de début de module",
+        "date": "31-01-2024",
         "pictos":["p-html", "p-css", "p-js"],
         "librairies": [],
-        "objectif": "Vérifier les acquis sur la sémantique, l'intégration dynamique et le responsive",
-        "lien": "https://titou1206.github.io/Dehors/"
+        "objectif": "Evaluation permettant de valider les acquis en HTML et CSS, avec notamment la gestion des flex-box et des positions. Ajout par la suite des animations javasrcipt et du menu burger",
+        "lien": "https://titou1206.github.io/MNTN/"
+    },
+    {
+        "titre": "M.M.T",
+        "image": "mmt.jpg",
+        "description": "Découvrez 'Moto Manga Tales', une expérience interactive où votre passion pour les motos et les mangas se fusionne dans des aventures épiques, vous permettant de créer votre propre légende de motard ou de motarde manga !",
+        "type": "Projet de milieu de module",
+        "date": "05-02-2024",
+        "pictos":["p-html", "p-css", "p-js"],
+        "librairies": [],
+        "objectif": "Exercice décontracté de création d'un site absurde. Prise en main des outils IA tel ChatPT ou Bing puis ajout du menu burger en fin de module avec javascript(28-03-24)",
+        "lien": "https://titou1206.github.io/M.M.T/"
     },
     {
         "titre": "4 Elements",
@@ -55,14 +44,47 @@
         "lien": "https://titou1206.github.io/4-Elmts/"
     },
     {
-        "titre": "M.M.T",
-        "image": "mmt.jpg",
-        "description": "Découvrez 'Moto Manga Tales', une expérience interactive où votre passion pour les motos et les mangas se fusionne dans des aventures épiques, vous permettant de créer votre propre légende de motard ou de motarde manga !",
-        "type": "Projet de début de module",
-        "date": "05-02-2024",
+        "titre": "Morpion",
+        "image": "morpion.jpg",
+        "description": "Mini-jeux de morpion",
+        "type": "Projet de milieu de module front",
+        "date": "26-02-2024",
         "pictos":["p-html", "p-css", "p-js"],
         "librairies": [],
-        "objectif": "Exercice décontracté de création d'un site absurde. Prise en main des outils IA tel ChatPT ou Bing puis ajout du menu burger en fin de module avec javascript(28-03-24)",
-        "lien": "https://titou1206.github.io/M.M.T/"
+        "objectif": "Exercice permettant la prise en main de javascript",
+        "lien": "https://titou1206.github.io/Morpion/"
+    },
+    {
+        "titre": "Application Météo",
+        "image": "meteo-app.jpg",
+        "description": "Application web de prévision météorologique à 7 jour et heure par heure sur 24h avec précipitation, vent et fond d'écran interactif",
+        "type": "Projet personnel",
+        "date": "27-02-2024",
+        "pictos":["p-html", "p-css", "p-js"],
+        "librairies": [],
+        "objectif": "Prise en main du fonctionnement d'une API et d'une grid CSS",
+        "lien": "https://titou1206.github.io/Meteo/"
+    },
+    {
+        "titre": "Dehors",
+        "image": "dehors.jpg",
+        "description": "Site vitrine d'un Escape game au coeur de Paris",
+        "type": "Projet de milieu de module front",
+        "date": "29-02-2024",
+        "pictos":["p-html", "p-css", "p-js"],
+        "librairies": [],
+        "objectif": "Vérifier les acquis sur la sémantique, l'intégration dynamique et le responsive",
+        "lien": "https://titou1206.github.io/Dehors/"
+    },
+    {
+        "titre": "Men Sportswear",
+        "image": "men-sportwear.jpg",
+        "description": "M’S est une boutique spécialisée dans les vêtements, chaussures et équipements de sport pour hommes. Collaborant avec les grandes marques et proposant leur propre gamme @utdoor.",
+        "type": "Evaluation de fin de module front",
+        "date": "18-03-2024",
+        "pictos":["p-html", "p-css", "p-css", "p-js", "p-leaflet"],
+        "librairies": ["swiperjs"],
+        "objectif": "Développement d'un site web incluant une page d'accueil et un template 'détail produits' statiques, un template dynamique pour la catégorie 'chaussures - baskets'. Le site doit être responsive, optimisé pour le référencement et l'accessibilité. Maquettes, images et pictogrammes fournis.",
+        "lien": "https://titou1206.github.io/M_S/"
     }
 ]
