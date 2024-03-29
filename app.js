@@ -7,12 +7,12 @@ burger.addEventListener("click", (e) => {
 	afficheMenu()
 })
 
+// récupération du menu par son selecteur css
+let menu = document.querySelector(".menu")
 function afficheMenu(){
 // role : affiche le menu et modifie le logo burger
 // parametre : rien
 // retour : rien
-	// récupération du menu par son selecteur css
-	let menu = document.querySelector(".menu")
 	// enleve ou ajoute la class menu-ouvert
 	menu.classList.toggle("menu-ouvert")
 	// récupération du hero, main et footer
@@ -30,6 +30,7 @@ function afficheMenu(){
 	burgerMiddle.classList.toggle("middle-check")
 	burgerBottom.classList.toggle("bottom-check")
 }
+
 
 
 
@@ -261,3 +262,10 @@ colorMode.addEventListener("change",(e)=>{
         L.marker([45.251463, 4.214260], {icon: myIcon}).addTo(map)
     }
 */
+
+
+let lumiere = document.querySelector(".lumiere")
+window.addEventListener("mousemove", (e)=> {
+    lumiere.style.left = e.clientX + "px"
+    lumiere.style.top = e.clientY + "px"
+})
