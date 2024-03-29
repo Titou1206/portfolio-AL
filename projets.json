@@ -2,13 +2,13 @@
     {
         "titre": "Men Sportswear",
         "image": "men-sportwear.jpg",
-        "description": "M’S, fondée en 1993, est une boutique spécialisée dans les vêtements, chaussures et équipements de sport pour hommes. Leur objectif est de fournir des produits de qualité pour la pratique sportive en intérieur et en extérieur, en collaborant avec les grandes marques et en proposant leur propre gamme @utdoor, alliant confort, respirabilité et protection grâce à des matériaux innovants.",
+        "description": "M’S est une boutique spécialisée dans les vêtements, chaussures et équipements de sport pour hommes. Collaborant avec les grandes marques et proposant leur propre gamme @utdoor.",
         "type": "Evaluation de fin de module front",
         "date": "18-03-2024",
         "pictos":["p-html", "p-css", "p-css", "p-js", "p-leaflet"],
         "librairies": ["swiperjs"],
-        "objectif": "Développement d'un site web conforme au design de M’S, incluant une page d'accueil statique, un template dynamique pour la catégorie 'chaussures - baskets', et un template statique pour les pages produits. Le site doit être responsive, optimisé pour le référencement et l'accessibilité. Maquettes, images et pictogrammes fournis. Ajout d'animations pour dynamiser le site.",
-        "lien": "https://titou1206.github.io/Men_Sportswear/"
+        "objectif": "Développement d'un site web incluant une page d'accueil et un template 'détail produits' statiques, un template dynamique pour la catégorie 'chaussures - baskets'. Le site doit être responsive, optimisé pour le référencement et l'accessibilité. Maquettes, images et pictogrammes fournis.",
+        "lien": "https://titou1206.github.io/M_S/"
     },
     {
         "titre": "Application Météo",
@@ -52,6 +52,17 @@
         "pictos":["p-html", "p-css", "p-js"],
         "librairies": [],
         "objectif": "Intégration html et css de la page d'accueil ainsi que la page feu puis ajout du formulaire en fin de module (11-03-24)",
-        "lien": "https://titou1206.github.io/4-Elements/"
+        "lien": "https://titou1206.github.io/4-Elmts/"
+    },
+    {
+        "titre": "M.M.T",
+        "image": "mmt.jpg",
+        "description": "Découvrez 'Moto Manga Tales', une expérience interactive où votre passion pour les motos et les mangas se fusionne dans des aventures épiques, vous permettant de créer votre propre légende de motard ou de motarde manga !",
+        "type": "Projet de début de module",
+        "date": "05-02-2024",
+        "pictos":["p-html", "p-css", "p-js"],
+        "librairies": [],
+        "objectif": "Exercice décontracté de création d'un site absurde. Prise en main des outils IA tel ChatPT ou Bing puis ajout du menu burger en fin de module avec javascript(28-03-24)",
+        "lien": "https://titou1206.github.io/M.M.T/"
     }
 ]

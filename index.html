@@ -7,10 +7,11 @@
     <meta name="description" content="Découvrez le portfolio de Antoine LAUGIER, un développeur web passionné avec une expertise dans la création de sites web modernes et performants. Explorez mes projets, mes compétences et découvrez comment je peux donner vie à vos idées en ligne.">
     <link rel="stylesheet" href="librairies/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="librairies/leaflet/dist/leaflet.css">
+    <link rel="stylesheet" href="librairies/aos-master/dist/aos.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/ico" href="assets/Logo-AL-developpement-web-black.ico">
 </head>
-<body data-theme="dark" data-style="normal">
+<body data-theme="light" data-style="normal">
     <!-- header -->
     <header class="large-12 flex align-center justify-between">
         <!-- picto a afficher format smartphone -->
@@ -74,7 +75,7 @@
             <h1 class="text-center"><span>< Developpeur Web ></span><br>// Full Stack</h1>
         </div>
         <!-- bouton CV -->
-        <div class="large-12">
+        <div data-aos="zoom-out-down" class="large-12">
             <div class="container-btn-hero large-10 small-11 flex justify-around mrlauto">
                 <!-- picto scroll -->
                 <div class="picto p-fleche"></div>
@@ -85,10 +86,10 @@
     <!-- main -->
     <main>
         <!-- portfolio -->
-        <section class="projets large-10 small-11 mrlauto menu-blur" id="projets">
+        <section class="projets large-10 medium-12 small-12 mrlauto menu-blur" id="projets">
             <!-- titre -->
             <div class="large-12 mrlauto flex justify-center">
-                <h3># Projets</h3>
+                <h3 data-aos="zoom-in-up"># Projets</h3>
             </div>
 
 
@@ -224,30 +225,30 @@
 
         </section>      
         <!-- a propos -->
-        <section class="about large-10 mrlauto mb160 menu-blur" id="about">
+        <section class="about large-10 small-11 mrlauto mb160 menu-blur" id="about">
             <!-- titre -->
             <div class="large-12 mrlauto flex justify-center">
-                <h3># A propos de moi</h3>
+                <h3 data-aos="zoom-in-up"># A propos de moi</h3>
             </div>
             <!-- div text et image -->
             <div class="container-about large-12 flex justify-around align-center mb80">
-                <div class="about-desc large-5 medium-10 small-11">
+                <div class="about-desc large-5 medium-12 small-12">
                     <p class="para-about">Avec une expérience de 15 ans dans le commerce automobile et informatique, je me suis tourné vers le développement web. Diplômé en microélectronique et systèmes embarqués, ma passion pour la programmation a toujours été présente. Grâce à mes années dans le commerce, j'ai développé une certaine polyvalence technique et une compréhension des besoins des clients, que je souhaite mettre à profit dans le domaine du développement web.</p>
                     <p class="para-about mt32 mb80">Je suis conscient de mes compétences en programmation et de ma capacité d'adaptation, et je suis motivé à continuer à apprendre et à évoluer dans ce domaine en constante évolution. Mon objectif est de contribuer humblement à la création d'applications web fonctionnelles et conviviales, en utilisant mes compétences pour répondre aux besoins des utilisateurs de manière efficace et créative.</p>
                     <!-- bouton CV -->
-                    <div class="container-bouton flex justify-center">
+                    <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" class="container-bouton flex justify-center">
                         <a class="bouton" target="_blank" href="assets/CV_Antoine_LAUGIER_Développeur_Web.pdf" title="lien de téléchargement de mon CV au format PDF - Nouvelle fenêtre">Téléchargez mon CV</a>
                     </div> 
                 </div>
              
-                <div class="img-moi"><!-- <img src="assets/img-moi.jpg" alt="Photo de moi en train de travailler"> --> </div>
+                <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="3000" class="img-moi"><!-- <img src="assets/img-moi.jpg" alt="Photo de moi en train de travailler"> --> </div>
             </div>
         </section>
         <!-- services -->
         <section class="services large-10 mrlauto mb160 menu-blur" id="services">
             <!-- titre -->
             <div class="large-12 mrlauto flex justify-center">
-                <h3># Mes services</h3>
+                <h3 data-aos="zoom-in-up"># Mes services</h3>
             </div>
             <div class="container-services flex justify-around">
                 <div>
@@ -273,7 +274,7 @@
                     </div>
                 </div>
                 <div class="img-comp-serv">
-                    <div class="mrlauto img-services"></div>
+                    <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="2000" class="mrlauto img-services"></div>
                     <div class="competence-container mb80">
                         <div class="justify-center flex gap32">
                             <div title="HTML" class="picto p-html"> </div>
@@ -283,11 +284,12 @@
                             <div class="picto p-php"> </div>
                             <div title="Symfony" class="picto p-sf"> </div>
                             <div class="picto p-mysql"> </div>
+                            <div title="React" class="picto p-react"> </div>
                         </div>
                         <div class="justify-center flex gap32 align-center mt32">
                             <div class="picto p-leaflet"> </div>
                             <p class="p-comp">swiperjs</p>
-                            <p class="p-comp">anime.js</p>
+                            <p class="p-comp">AOS</p>
                         </div>
                         <div class="justify-center flex gap32 align-center mt32">
                             <div title="VScode" class="picto p-vs"> </div>
@@ -340,6 +342,7 @@
     </main>
     <script src="librairies/swiper/swiper-bundle.js" defer></script>
     <script src="librairies/leaflet/dist/leaflet.js" defer></script>
+    <script src="librairies/aos-master/dist/aos.js" defer></script>
     <script src="app.js" defer></script>  
 </body>
 </html>

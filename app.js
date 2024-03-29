@@ -1,3 +1,5 @@
+AOS.init();
+
 // récupération de l'input du burger par son selecteur css
 let burger = document.querySelector(".burger")
 // surveillance du click sur le burger et lance la fonction affiche menu
@@ -57,8 +59,10 @@ function initSwiper(){
         // Optional parameters
         direction: 'horizontal',
         loop: true,
+        autoplay: {
+            delay: 5000,
+          },
         // Default parameters
-
         slidesPerView: 1,
         spaceBetween: 20,
         // Responsive breakpoints
@@ -99,27 +103,30 @@ function createSlide(projets){
     let swiper = document.querySelector(".swiper-wrapper")
     swiper.innerHTML = ""
     projets.forEach(projet => {
-        console.log(projet)
         let pics = recupPicto(projet.pictos)
         let libs = recupLib(projet.librairies)
         swiper.innerHTML += `<div class="swiper-slide">
             <div class="card-inner">
                 <div class="card-front">
-                    <h4 class="large-11 mrlauto text-center">${projet.titre}</h4>
-                    <div class="projet-img mt32"><img src="assets/captures-projets/${projet.image}" alt="copie d'écran du projet mntn"></div>
-                    <p class="large-11 mrlauto mt32">${projet.description}</p>
+                    <div>
+                        <h4 class="large-11 mrlauto text-center">${projet.titre}</h4>
+                        <div class="projet-img mt32"><img src="assets/captures-projets/${projet.image}" alt="copie d'écran du projet mntn"></div>
+                        <p class="large-11 mrlauto mt32">${projet.description}</p>
+                    </div>
                     <div class="large-11 mrlauto flex justify-between mt32">
                         <p>${projet.date}
                         <p>...</p>        
                     </div>
                 </div>
                 <div class="card-back">
-                    <h4 class="large-11 mrlauto text-center">${projet.type}</h4>
-                    <div class="flex gap16 mt32 align-center justify-center">
-                        ${pics}
-                        ${libs}
+                    <div>
+                        <h4 class="large-11 mrlauto text-center">${projet.type}</h4>
+                        <div class="flex gap16 mt32 align-center justify-center">
+                            ${pics}
+                            ${libs}
+                        </div>
+                        <p class="large-11 mrlauto mt32 mb80">${projet.objectif}</p>
                     </div>
-                    <p class="large-11 mrlauto mt32 mb80">${projet.objectif}</p>
                     <a class="large-11 mrlauto flex justify-center" target="_blank" href="${projet.lien}">${projet.lien}</a>
                 </div>
             </div>
@@ -150,15 +157,7 @@ function recupLib(elements){
     }
 
 
-// librairie leaflet - on affiche la carte
-var map = L.map('map').setView([45.440138, 4.387329], 8);
-/*
-var Stadia_AlidadeSmooth = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
-    minZoom: 0,
-    maxZoom: 20,
-})
-let iconCouleur = "black"
-afficheMap(Stadia_AlidadeSmooth, iconCouleur)*/
+
 
 function afficheMap(fondMap,iconCouleur){
     var myIcon = L.icon({
@@ -175,17 +174,36 @@ function afficheMap(fondMap,iconCouleur){
 let body = document.querySelector("body")
 // récupération du bouton
 let colorMode = document.getElementById("switch-mode")
+
+// librairie leaflet - on affiche la carte
+var map = L.map('map').setView([45.440138, 4.387329], 8);
+var CartoDB_DarkMatter = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+	subdomains: 'abcd',
+	maxZoom: 20
+}).addTo(map);
+colorMode.checked = true
+var myIcon = L.icon({
+    iconUrl: `assets/picto/Logo-AL-developpement-web-white.png`,
+    iconSize: [38, 38],
+    iconAnchor: [16, 16],
+});
+L.marker([45.251463, 4.214260], {icon: myIcon}).addTo(map)
+//afficheMap(Stadia_AlidadeSmooth, iconCouleur)
+
+
+
+
 // surveille le changement d'état du bouton
 colorMode.addEventListener("change",(e)=>{
     // on change l'attribut data-theme en light ou dark en fonction de l'état
     if(colorMode.checked){
         body.setAttribute("data-theme","light")
-        var Stadia_AlidadeSmoothDark = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
-            minZoom: 0,
-            maxZoom: 20,
-        }).addTo(map)
-        //let iconCouleur = "white"
-        //afficheMap(Stadia_AlidadeSmoothDark, iconCouleur)
+        var CartoDB_DarkMatter = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+            subdomains: 'abcd',
+            maxZoom: 20
+        }).addTo(map);
         var myIcon = L.icon({
             iconUrl: `assets/picto/Logo-AL-developpement-web-white.png`,
             iconSize: [38, 38],
@@ -194,12 +212,11 @@ colorMode.addEventListener("change",(e)=>{
         L.marker([45.251463, 4.214260], {icon: myIcon}).addTo(map)
     }else{
         body.setAttribute("data-theme","dark")
-        var Stadia_AlidadeSmooth = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
-            minZoom: 0,
-            maxZoom: 20,
-        }).addTo(map)
-        //let iconCouleur = "black"
-        //afficheMap(Stadia_AlidadeSmooth, iconCouleur)
+        var CartoDB_Positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+            subdomains: 'abcd',
+            maxZoom: 20
+        }).addTo(map);
         var myIcon = L.icon({
             iconUrl: `assets/picto/Logo-AL-developpement-web-black.png`,
             iconSize: [38, 38],
@@ -209,18 +226,14 @@ colorMode.addEventListener("change",(e)=>{
     }
 })
 
-
-
-
-
+/*
     //dark mode test
     function isDarkMode(){
         return globalThis.matchMedia?.("(prefers-color-scheme.dark)").matches ?? false;
     }
-    let checkbox = document.getElementById("switch-mode")
     if(isDarkMode()){
         body.setAttribute("data-theme","dark")
-        checkbox.checked = false
+        colorMode.checked = false
         var Stadia_AlidadeSmooth = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
             minZoom: 0,
             maxZoom: 20,
@@ -235,7 +248,7 @@ colorMode.addEventListener("change",(e)=>{
         L.marker([45.251463, 4.214260], {icon: myIcon}).addTo(map)
     }else{
         body.setAttribute("data-theme","light")
-        checkbox.checked = true
+        colorMode.checked = true
         var Stadia_AlidadeSmoothDark = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
             minZoom: 0,
             maxZoom: 20,
@@ -249,3 +262,4 @@ colorMode.addEventListener("change",(e)=>{
         });
         L.marker([45.251463, 4.214260], {icon: myIcon}).addTo(map)
     }
+*/
