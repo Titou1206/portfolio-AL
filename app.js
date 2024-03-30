@@ -1,5 +1,15 @@
 AOS.init();
 
+document.addEventListener("DOMContentLoaded", (e)=>{
+    let loader = document.getElementById("loader")
+    setTimeout(()=>{
+        loader.classList.add("loader-hidden")
+        setTimeout(()=>{
+            loader.classList.add("d-none")
+        }, 500)
+    }, 2000)
+})
+
 // récupération de l'input du burger par son selecteur css
 let burger = document.querySelector(".burger")
 // surveillance du click sur le burger et lance la fonction affiche menu
