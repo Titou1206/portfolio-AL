@@ -196,7 +196,7 @@ h3{
 }
 .logo, a, .p-comp, .projet a, .services h4 { transition-duration: 0.3s; }
 .logo:hover { background-image: url("assets/picto/Logo-AL-developpement-web-blue.png"); }
-.services h4:hover, footer a:hover, header a:hover, .swiper-fleche:hover, .p-comp:hover, .swiper a:hover { color: var(--secondary-color); }
+.services h4:hover, footer a:hover, header a:hover, .p-comp:hover, .swiper a:hover { color: var(--secondary-color); }
 
 
 
@@ -237,7 +237,7 @@ body{
   position: absolute;
   top: 0;
   z-index: 3;
-  animation: swingLogo 0.8s ease-in-out infinite alternate;
+  animation: swingLogo 0.7s ease-in-out infinite alternate;
 }
 
 @keyframes swingLogo {
@@ -270,7 +270,7 @@ header{
   background-image: var(--picto);
   transition-duration: 0.3s;
 }
-.picto:hover{ background-image: url("assets/picto/sprite-blue.png");}
+.picto:hover, address a:hover > div { background-image: url("assets/picto/sprite-blue.png");}
 
 .p-localisation{
   background-position-x: 0;
@@ -391,7 +391,7 @@ main{position: relative;}
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  position: sticky;
+  position: fixed;
   top: calc(20vh / 2);
   left: calc(20% / 2);
   z-index: -1;
@@ -719,8 +719,9 @@ les resolutions d'ecrans*/
     
     h3{margin-top: 80px; margin-bottom: 40px;}
 
-    .swiper{width: 300px;}
-    .swiper-slide{width: 300px !important;}
+    .swiper{width: 300px; height: 500px;}
+    .swiper-slide{width: 300px !important; height: 420px;}
+    .card-back, .card-front {padding: 16px 0;}
 
     .img-moi{ width: 300px;height: 300px;}
     .services{margin-bottom: 80px;}
@@ -742,9 +743,10 @@ les resolutions d'ecrans*/
   }
 
   @media screen and (max-width: 999px) {
-    h1{margin-top: 80px;}
-    .container-btn-hero{ flex-direction: column-reverse; gap: 60px; align-items: center;}
+    .container-btn-hero{ flex-direction: column-reverse; gap: 40px; align-items: center;}
     .hero-titre{flex-direction: column;}
+    .hero{ padding: 120px 0 40px 0;}
+    .hero-titre{gap: 60px;}
     
 
 

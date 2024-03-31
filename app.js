@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", (e)=>{
         setTimeout(()=>{
             loader.classList.add("d-none")
         }, 500)
-    }, 2000)
+    }, 1500)
 })
 
 // récupération de l'input du burger par son selecteur css
