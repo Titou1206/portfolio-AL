@@ -377,9 +377,54 @@ header{
 .bouton{
   background-color: var(--secondary-color);
   padding: 8px 16px;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 2px 2px 5px 2px #29cacf4b;
 }
+
+.container-chevron-anim{
+  gap: 8px;
+}
+
+.chevron-anim{
+  font-size: 24px;
+  font-weight: bold;
+  animation: scroll-down 3s infinite;
+}
+
+/* Animate scroll icon */
+@keyframes scroll-down {
+  0%, 100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+  35% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+
+  70% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+}
+
+
+.chevron-arrive{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.chevron-repart{
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+.chevron-init{
+  transform: translateY(-10px);
+}
+
+
 
 /* main */
 
@@ -444,8 +489,8 @@ main{position: relative;}
   backface-visibility: hidden;
   padding: 32px 0;
   background: rgba(41, 202, 207, 0.1);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(15px);
   display: flex;
   flex-direction: column;
@@ -467,6 +512,7 @@ main{position: relative;}
 .img-moi{
   width: 600px;
   height: 600px;
+  border-radius: 5px;
   background-image: var(--img-about);
   background-size: cover;
 }
@@ -521,7 +567,7 @@ footer {
 #map {
   width: 200px;
   height: 200px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 .leaflet-control-attribution, .leaflet-control-zoom {display: none;}
 
@@ -745,10 +791,12 @@ les resolutions d'ecrans*/
   @media screen and (max-width: 999px) {
     .container-btn-hero{ flex-direction: column-reverse; gap: 40px; align-items: center;}
     .hero-titre{flex-direction: column;}
-    .hero{ padding: 120px 0 40px 0;}
+    .hero{ padding: 120px 0 80px 0;}
     .hero-titre{gap: 60px;}
     
-
+    .container-chevron-anim{
+      flex-direction: column;
+    }
 
     /* header */
     .menu {
@@ -781,13 +829,13 @@ les resolutions d'ecrans*/
       display: block;
       position: relative;
       cursor: pointer;
-      width: 50px;
-      height: 40px;
+      width: 40px;
+      height: 32px;
     }
     .burger span {
       position: absolute;
-      width: 45px;
-      height: 7px;
+      width: 36px;
+      height: 4px;
       background: var(--color-text);
       border-radius: 100px;
       display: inline-block;
@@ -799,7 +847,7 @@ les resolutions d'ecrans*/
       top: 0;
     }    
     .burger span.middle {
-      top: 17px;
+      top: 14px;
     }   
     .burger span.bottom {
       bottom: 0;

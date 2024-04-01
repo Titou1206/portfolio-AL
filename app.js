@@ -1,5 +1,7 @@
 AOS.init();
 
+
+// fonction loader au chargement
 document.addEventListener("DOMContentLoaded", (e)=>{
     let loader = document.getElementById("loader")
     setTimeout(()=>{
@@ -7,7 +9,7 @@ document.addEventListener("DOMContentLoaded", (e)=>{
         setTimeout(()=>{
             loader.classList.add("d-none")
         }, 500)
-    }, 1500)
+    }, 1200)
 })
 
 // récupération de l'input du burger par son selecteur css
