@@ -456,6 +456,7 @@ main{position: relative;}
   perspective: 1000px;
   margin-top: auto;
   margin-bottom: auto;
+  cursor: pointer;
 }
 .projet-img { 
   width: 100%;
@@ -477,7 +478,11 @@ main{position: relative;}
 
 .swiper a {font-size: var(--font-size-p);}
 
-.swiper-slide:hover .card-inner {
+/*.swiper-slide:hover .card-inner {
+  transform: rotateY(180deg);
+}*/
+
+.flip-card{
   transform: rotateY(180deg);
 }
 

@@ -141,8 +141,10 @@ fetch("projets.json")
 .then(ret=>{
     return ret.json()
 })
-.then(projets=>{createSlide(projets)
+.then(projets=>{
+    createSlide(projets)
     initSwiper()
+    flipCard()
 })
 
 
@@ -206,6 +208,21 @@ function recupLib(elements){
         })
         return elts
     }
+
+
+
+function flipCard(){    
+// role : retourne les carte projets au clic
+// parametres : aucun
+// retour : aucun
+    let swiperSlides = document.querySelectorAll(".swiper-slide")
+    swiperSlides.forEach(swiperSlide =>{
+        let cardInner = swiperSlide.querySelector(".card-inner")
+        swiperSlide.addEventListener("click", (e)=>{
+            cardInner.classList.toggle("flip-card")
+        })
+    })
+}
 
 
 
