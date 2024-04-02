@@ -165,7 +165,7 @@ function createSlide(projets){
                     </div>
                     <div class="large-11 mrlauto flex justify-between mt32">
                         <p>${projet.date}
-                        <p>...</p>        
+                        <p class="cta-card">+</p>        
                     </div>
                 </div>
                 <div class="card-back">

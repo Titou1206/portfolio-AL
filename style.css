@@ -388,7 +388,7 @@ header{
 .chevron-anim{
   font-size: 24px;
   font-weight: bold;
-  animation: scroll-down 3s infinite;
+  animation: scroll-down 1.5s infinite;
 }
 
 /* Animate scroll icon */
@@ -505,6 +505,11 @@ main{position: relative;}
 .card-back {
   border-radius: 10px;
   transform: rotateY(180deg);
+}
+
+.cta-card{
+  font-weight: bolder;
+  font-size: 24px;
 }
 
 /* A propos */
@@ -805,7 +810,6 @@ les resolutions d'ecrans*/
       top: 80px;
       right: 0;
       width: 150px;
-      padding: 8px;
       height: calc(100vh - 80px);
       backdrop-filter: blur(12px);
       transform: translateX(200px);
@@ -820,9 +824,9 @@ les resolutions d'ecrans*/
     .menu nav ul {
       flex-direction: column;
       align-items: center;
-      margin-top: 32px;
+      margin-top: 16px;
     }
-    .menu li { margin-top: 16px; }
+    /*.menu li { margin-top: 16px; }*/
     .logo-menu { display: none; }
     .logo-burger { display: block; }
     .burger {
