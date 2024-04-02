@@ -855,13 +855,13 @@ les resolutions d'ecrans*/
     .top-check {
       transform: rotate(45deg);
       transform-origin: top left;
-      top: 2px;
+      top: 4px;
       left: 5px;
     }
     .bottom-check {
       transform: rotate(-45deg);
       transform-origin: bottom left;
-      bottom: -2px;
+      bottom: -4px;
       left: 5px;
     }
     .middle-check {
