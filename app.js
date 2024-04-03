@@ -132,7 +132,10 @@ function initSwiper(){
                 slidesPerView: 4,
                 spaceBetween: 50
             }
-        }
+        },
+        pagination: {
+            el: '.swiper-pagination',
+        },
     });
 }
 
@@ -226,7 +229,7 @@ function flipCard(){
 
 
 
-
+/*
 function afficheMap(fondMap,iconCouleur){
     var myIcon = L.icon({
         iconUrl: `assets/picto/Logo-AL-developpement-web-${iconCouleur}.png`,
@@ -236,6 +239,7 @@ function afficheMap(fondMap,iconCouleur){
     L.marker([45.251463, 4.214260], {icon: myIcon}).addTo(map)
     fondMap.addTo(map);
 }
+*/
 
 // Dark mode
 // récupération du body
@@ -252,7 +256,7 @@ var CartoDB_Positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/
 }).addTo(map);
 //colorMode.checked = true
 var myIcon = L.icon({
-    iconUrl: `assets/picto/Logo-AL-developpement-web-white.png`,
+    iconUrl: `assets/picto/Logo-AL-developpement-web-black.png`,
     iconSize: [38, 38],
     iconAnchor: [16, 16],
 });

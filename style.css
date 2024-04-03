@@ -450,6 +450,12 @@ main{position: relative;}
   height: 700px;
   z-index: 0;
 }
+
+/*
+.swiper-pagination-bullet{}
+.swiper-pagination-bullet-active{}
+*/
+
 .swiper-slide{
   width: 320px !important;
   height: 500px;
