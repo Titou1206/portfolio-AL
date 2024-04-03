@@ -451,10 +451,10 @@ main{position: relative;}
   z-index: 0;
 }
 
-/*
-.swiper-pagination-bullet{}
-.swiper-pagination-bullet-active{}
-*/
+
+.swiper-pagination-bullet{ background-color: var(--color-text)}
+.swiper-pagination-bullet-active{ background-color: var(--secondary-color);}
+
 
 .swiper-slide{
   width: 320px !important;
