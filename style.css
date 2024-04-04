@@ -599,6 +599,8 @@ footer {
   flex-direction: column;
 }
 
+.mention span {color: var(--secondary-color);}
+
 .lumiere{
   width: 80px;
   height: 80px;
