@@ -165,7 +165,7 @@ function createSlide(projets){
                 <div class="card-front">
                     <div>
                         <h4 class="large-11 mrlauto text-center">${projet.titre}</h4>
-                        <div class="projet-img mt32"><img src="assets/captures-projets/${projet.image}" alt="copie d'écran du projet mntn"></div>
+                        <div class="projet-img mt32"><img src="assets/captures-projets/${projet.image}" alt="copie d'écran du projet ${projet.titre}"></div>
                         <p class="large-11 mrlauto mt32">${projet.description}</p>
                     </div>
                     <div class="large-11 mrlauto flex justify-between mt32">
