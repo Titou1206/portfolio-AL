@@ -2,7 +2,7 @@
     {
         "titre": "La Ruche",
         "image": "ruche.jpg",
-        "description": "Site vitrine d'un producteur de miel",
+        "description": "'La Ruche', découvrez nos miels traditionnels et respectueux, fruits d'un engagement profond envers l'apiculture durable.",
         "type": "Projet de début de module front",
         "date": "25-01-2024",
         "pictos":["p-html", "p-css"],
@@ -11,9 +11,20 @@
         "lien": "https://titou1206.github.io/Ruche/"
     },
     {
+        "titre": "Interno",
+        "image": "interno.jpg",
+        "description": "'Interno' propose des services de design d'intérieur sur mesure, alliant créativité et qualité. Explorez nos services, découvrez nos projets et contactez notre équipe. Abonnez-vous à notre newsletter pour rester à jour sur les dernières tendances.",
+        "type": "Exercice de début de module",
+        "date": "24-01-2024",
+        "pictos":["p-html", "p-css"],
+        "librairies": [],
+        "objectif": "Application des connaissances HTML et CSS, mise en place du responsive design et découverte d'un formulaire de contact",
+        "lien": "https://titou1206.github.io/interno/"
+    },
+    {
         "titre": "MNTN",
         "image": "mntn.jpg",
-        "description": "Découvrez 'Moto Manga Tales', une expérience interactive où votre passion pour les motos et les mangas se fusionne dans des aventures épiques, vous permettant de créer votre propre légende de motard ou de motarde manga !",
+        "description": "'MNTN' est votre guide en ligne ultime pour la randonnée, proposant des conseils sur l'équipement, les destinations et les essentiels de la randonnée. Découvrez nos ressources supplémentaires et rencontrez notre équipe.",
         "type": "Evaluation de début de module",
         "date": "31-01-2024",
         "pictos":["p-html", "p-css", "p-js"],
@@ -35,7 +46,7 @@
     {
         "titre": "4 Elements",
         "image": "4-elements.jpg",
-        "description": "Site d'un Hotel de luxe représentant les 4 éléments",
+        "description": "Découvrez l'expérience des 4 Éléments : une immersion sensorielle unique dans des hôtels avant-gardistes, où luxe et harmonie avec la nature se rencontrent pour une expérience inoubliable.",
         "type": "Evaluation de milieu de module front",
         "date": "12-02-2024",
         "pictos":["p-html", "p-css", "p-js"],
@@ -46,7 +57,7 @@
     {
         "titre": "Morpion",
         "image": "morpion.jpg",
-        "description": "Mini-jeux de morpion",
+        "description": "Prenez un moment de détente avec notre mini-jeux de morpion",
         "type": "Projet de milieu de module front",
         "date": "26-02-2024",
         "pictos":["p-html", "p-css", "p-js"],
@@ -57,7 +68,7 @@
     {
         "titre": "Application Météo",
         "image": "meteo-app.jpg",
-        "description": "Application web de prévision météorologique à 7 jour et heure par heure sur 24h avec précipitation, vent et fond d'écran interactif",
+        "description": "Suivez les prévisions météorologiques en temps réel avec notre application web (météo à 7 jour et heure par heure sur 24h avec précipitation, vent et fond d'écran interactif)",
         "type": "Projet personnel",
         "date": "27-02-2024",
         "pictos":["p-html", "p-css", "p-js"],
@@ -68,7 +79,7 @@
     {
         "titre": "Dehors",
         "image": "dehors.jpg",
-        "description": "Site vitrine d'un Escape game au coeur de Paris",
+        "description": "Découvrez 'Dehors! - Escape Game Paris' : vivez des aventures palpitantes en endossant le rôle d'un détective, résolvant des énigmes farfelues dans un manoir mystérieux au cœur de Paris ou même dans l'espace.",
         "type": "Projet de milieu de module front",
         "date": "29-02-2024",
         "pictos":["p-html", "p-css", "p-js"],
