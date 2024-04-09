@@ -365,7 +365,7 @@ header{
   position: relative;
   background-position: center;
   align-content: space-between;
-  padding: 180px 0 90px 0;
+  padding: 25vh 0 10vh 0;
 }
 
 .span-blue {color: var(--secondary-color);}
@@ -390,8 +390,9 @@ header{
   animation: scroll-down 1.5s infinite;
 }
 
+/*
 .container-btn-hero{ flex-direction: column-reverse; gap: 15vh; align-items: center;}
-
+*/
 
 
 /* Animate scroll icon */
@@ -805,7 +806,7 @@ les resolutions d'ecrans*/
   @media screen and (max-width: 999px) {
     
     .hero-titre{flex-direction: column;}
-    .hero{ padding: 120px 0 80px 0;}
+    /*.hero{ padding: 120px 0 80px 0;}*/
     .hero-titre{gap: 60px;}
     
 
