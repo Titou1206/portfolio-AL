@@ -13,7 +13,7 @@
     {
         "titre": "Interno",
         "image": "interno.jpg",
-        "description": "'Interno' propose des services de design d'intérieur sur mesure, alliant créativité et qualité. Explorez nos services, découvrez nos projets et contactez notre équipe. Abonnez-vous à notre newsletter pour rester à jour sur les dernières tendances.",
+        "description": "'Interno' : votre destination pour un design d'intérieur sur mesure, créatif et de qualité. Explorez nos services, projets et contactez notre équipe. Abonnez-vous à notre newsletter pour les dernières tendances.",
         "type": "Exercice de début de module",
         "date": "24-01-2024",
         "pictos":["p-html", "p-css"],

@@ -197,7 +197,9 @@ h3{
 }
 .logo, a, .p-comp, .projet a, .services h4 { transition-duration: 0.3s; }
 .logo:hover { background-image: url("assets/picto/Logo-AL-developpement-web-blue.png"); }
-.services h4:hover, footer a:hover, header a:hover, .p-comp:hover, .swiper a:hover { color: var(--secondary-color); }
+footer a:hover, header a:hover, .swiper a:hover { color: var(--secondary-color); }
+
+
 
 
 
@@ -265,7 +267,7 @@ header{
     background-size: contain;
     background-repeat: no-repeat;
 }
-.picto{
+.picto, .picto-service{
   width: 32px;
   height: 32px;
   background-image: var(--picto);
@@ -380,10 +382,12 @@ header{
   padding: 8px 16px;
   border-radius: 5px;
   box-shadow: 2px 2px 5px 2px #29cacf4b;
+  color: black;
 }
 
 .container-chevron-anim{
   gap: 8px;
+  flex-direction: column;
 }
 
 .chevron-anim{
@@ -391,6 +395,8 @@ header{
   font-weight: bold;
   animation: scroll-down 1.5s infinite;
 }
+
+.container-btn-hero{ flex-direction: column-reverse; gap: 15vh; align-items: center;}
 
 /* Animate scroll icon */
 @keyframes scroll-down {
@@ -483,7 +489,7 @@ main{position: relative;}
   transition: transform 0.999s;
 }
 
-.swiper a {font-size: var(--font-size-p);}
+.swiper a {font-size: var(--font-size-p); padding: 16px;}
 
 /*.swiper-slide:hover .card-inner {
   transform: rotateY(180deg);
@@ -808,14 +814,11 @@ les resolutions d'ecrans*/
   }
 
   @media screen and (max-width: 999px) {
-    .container-btn-hero{ flex-direction: column-reverse; gap: 40px; align-items: center;}
+    
     .hero-titre{flex-direction: column;}
     .hero{ padding: 120px 0 80px 0;}
     .hero-titre{gap: 60px;}
     
-    .container-chevron-anim{
-      flex-direction: column;
-    }
 
     /* header */
     .menu {
@@ -823,13 +826,13 @@ les resolutions d'ecrans*/
       position: fixed;
       top: 80px;
       right: 0;
-      width: 150px;
+      width: 100%;
       height: calc(100vh - 80px);
       backdrop-filter: blur(12px);
-      transform: translateX(200px);
+      transform: translateX(100%);
       transition: transform 0.6s linear;
     }
-    .menu>div { flex-direction: column; align-items: center; }
+    .menu>div { flex-direction: column; align-items: center; margin-top: 12vh; }
 
     .menu-ouvert { transform: translateX(0);}
     .hero, main, footer { transition: filter 0.6s linear; }

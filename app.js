@@ -182,7 +182,7 @@ function createSlide(projets){
                         </div>
                         <p class="large-11 mrlauto mt32 mb80">${projet.objectif}</p>
                     </div>
-                    <a class="large-11 mrlauto flex justify-center" target="_blank" href="${projet.lien}">${projet.lien}</a>
+                    <a class="large-11 mrlauto flex justify-center" target="_blank" href="${projet.lien}">- Voir le projet -</a>
                 </div>
             </div>
         </div>`
@@ -342,6 +342,5 @@ window.addEventListener("mousemove", (e)=> {
     lumiere.style.left = e.clientX + "px"
     lumiere.style.top = e.clientY + "px"
 })
-
 
 
