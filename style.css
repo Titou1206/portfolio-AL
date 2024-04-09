@@ -18,7 +18,7 @@
 /* Webfont: Karla bold */
 @font-face {
   font-family: 'Rubik';
-  src: url('fonts/Rubik/Rubik-Regular.ttf')format('truetype');
+  src: url('fonts/Rubik/Rubik-Light.ttf')format('truetype');
 }
 
 *{
@@ -71,7 +71,8 @@ li{
   --font-size-t2: 36px;
   --font-size-t3: 26px;
   --font-size-a: 20px;
-  --font-size-p: 18px;
+  --font-size-p: 16px;
+  --font-light: 400;
 }
 [data-style="normal"]{
   --font-fam-t1: "Karla", sans-serif;  
@@ -83,6 +84,7 @@ li{
   --font-size-t3: 32px;
   --font-size-a: 24px;
   --font-size-p: 18px;
+  --font-light: 300;
 }
 
 /* police */
@@ -96,11 +98,11 @@ h3, h4{
 }
 a{
     font-family: var(--font-fam-a);
-    font-weight: 400;
+    font-weight: var(--font-light);
 }
 p{
     font-family: var(--font-fam-p);
-    font-weight: 400;
+    font-weight: var(--font-light);
     line-height: 20px;
 }
 
@@ -456,7 +458,7 @@ main{position: relative;}
 
 .swiper-slide{
   width: 320px !important;
-  height: 500px;
+  height: 520px;
   perspective: 1000px;
   margin-top: auto;
   margin-bottom: auto;
@@ -763,8 +765,8 @@ les resolutions d'ecrans*/
       --font-size-t1: 28px;
       --font-size-t2: 24px;
       --font-size-t3: 22px;
-      --font-size-a: 18px;
-      --font-size-p: 16px;
+      --font-size-a: 16px;
+      --font-size-p: 10px;
     }
     [data-style="normal"]{
       --font-fam-t1: "Anton", sans-serif;
