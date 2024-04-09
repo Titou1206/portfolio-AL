@@ -758,10 +758,6 @@ les resolutions d'ecrans*/
 
   @media screen and (max-width: 620px) {
     [data-style="access"]{
-      --font-fam-t1: "Luciole";
-      --font-fam-t2: "Luciole";
-      --font-fam-a: "Luciole";
-      --font-fam-p: "Luciole";
       --font-size-t1: 28px;
       --font-size-t2: 24px;
       --font-size-t3: 22px;
@@ -769,12 +765,8 @@ les resolutions d'ecrans*/
       --font-size-p: 10px;
     }
     [data-style="normal"]{
-      --font-fam-t1: "Anton", sans-serif;
-      --font-fam-t2: "Roboto", sans-serif;
-      --font-fam-a: "Roboto", sans-serif;
-      --font-fam-p: "Cardo", serif;
-      --font-size-t1: 36px;
-      --font-size-t2: 32px;
+      --font-size-t1: 32px;
+      --font-size-t2: 28px;
       --font-size-t3: 22px;
       --font-size-a: 16px;
       --font-size-p: 12px;
