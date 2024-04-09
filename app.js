@@ -248,7 +248,7 @@ let body = document.querySelector("body")
 let colorMode = document.getElementById("switch-mode")
 
 // librairie leaflet - on affiche la carte
-var map = L.map('map').setView([45.440138, 4.387329], 8);
+var map = L.map('map').setView([45.466671, 4.55], 8);
 var CartoDB_Positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
             subdomains: 'abcd',
@@ -260,8 +260,11 @@ var myIcon = L.icon({
     iconSize: [38, 38],
     iconAnchor: [16, 16],
 });
-L.marker([45.251463, 4.214260], {icon: myIcon}).addTo(map)
+L.marker([45.241701, 4.235366], {icon: myIcon}).addTo(map)
 //afficheMap(Stadia_AlidadeSmooth, iconCouleur)
+
+
+
 
 
 
@@ -281,7 +284,7 @@ colorMode.addEventListener("change",(e)=>{
             iconSize: [38, 38],
             iconAnchor: [16, 16],
         });
-        L.marker([45.251463, 4.214260], {icon: myIcon}).addTo(map)
+        L.marker([45.241701, 4.235366], {icon: myIcon}).addTo(map)
     }else{
         body.setAttribute("data-theme","dark")
         var CartoDB_Positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
@@ -294,7 +297,7 @@ colorMode.addEventListener("change",(e)=>{
             iconSize: [38, 38],
             iconAnchor: [16, 16],
         });
-        L.marker([45.251463, 4.214260], {icon: myIcon}).addTo(map)
+        L.marker([45.241701, 4.235366], {icon: myIcon}).addTo(map)
     }
 })
 

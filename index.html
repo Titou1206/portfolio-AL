@@ -21,9 +21,9 @@
     <!-- header -->
     <header class="large-12 flex align-center justify-between">
         <!-- picto a afficher format smartphone -->
-        <a href="#hero" class="d-none logo-burger"><div class="logo logo-header curs-point"></div></a>
+        <a href="#hero" class="d-none logo-burger" title="accueil"><div class="logo logo-header curs-point"></div></a>
         <!-- burger a afficher au format smartphone -->
-        <div class="burger d-none">
+        <div class="burger d-none" title="menu">
             <span class="top"></span>
             <span class="middle"></span>
             <span class="bottom"></span>
@@ -36,10 +36,10 @@
                     <!-- nav -->
                     <nav class="pages">
                         <ul class="flex align-center gap16">
-                            <li class="logo-menu"><a href="#hero"><div class="logo logo-header curs-point"></div></a></li>
-                            <li><a class="nav-page" href="#projets"># Projets</a></li>
-                            <li><a class="nav-page" href="#about"># A propos</a></li>
-                            <li><a class="nav-page" href="#services"># Services</a></li>
+                            <li class="logo-menu"><a href="#hero" title="logo de ALDEV"><div class="logo logo-header curs-point"></div></a></li>
+                            <li><a class="nav-page" href="#projets" title="lien vers la section projets"># Projets</a></li>
+                            <li><a class="nav-page" href="#about" title="lien vers la section à propos de moi"># A propos</a></li>
+                            <li><a class="nav-page" href="#services" title="lien vers la section services"># Services</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -48,19 +48,19 @@
                     <!-- nav reseaux / contact -->
                     <nav class="reseaux">
                         <ul class="flex align-center gap16">
-                            <li><a class="curs-point" href="tel:+33666529277" title="lien pour m'appeler"><div class="picto p-phone"></div></a></li>
+                            <!--  <li><a class="curs-point" href="tel:+33666529277" title="lien pour m'appeler"><div class="picto p-phone"></div></a></li> -->
                             <li><a class="curs-point" href="mailto:laugierantoine@gmail.com" title="lien pour m'envoyer un mail"><div  class="picto p-mail"></div></a></li>
                             <li><a target="_blank"  class="curs-point" href="https://www.linkedin.com/in/antoine-laugier/" title="lien vers ma page linkedIn - Nouvelle fenêtre"><div class="picto p-linkedin "></div></a></li>
                             <li><a target="_blank"  class="curs-point" href="https://github.com/Titou1206" title="lien vers ma page GitHub - Nouvelle fenêtre"><div class="picto p-github"></div></a></li>    
                             <li>
-                                <label for="switch-access">
+                                <label for="switch-access" title="Typographie accessibilité">
                                 <div id="button-access" class="p-access curs-point">
                                     <input type="checkbox" class="checkbox" id="switch-access" name="switch-access">
                                 </div>
                                 </label>
                             </li> 
                             <li>
-                                <div class="switch-mode">
+                                <div class="switch-mode" title="switch dark/light mode">
                                     <label class="switch-label">
                                     <input type="checkbox" class="checkbox" id="switch-mode" name="switch-mode">
                                     <span class="slider"></span>
@@ -205,7 +205,7 @@
             <!-- footer gauche -->
             <div class="footer-gauche flex medium-12">
                 <div class="aldev flex justify-center align-center">
-                    <a href="#hero"><div class="logo-footer logo curs-point"></div></a>
+                    <a href="#hero" title="retour à l'accueil"><div class="logo-footer logo curs-point"></div></a>
                     <h4 class="mt16 text-center">Antoine LAUGIER<br>Developpement Web</h4>
                 </div>
                 <!-- map -->
@@ -214,8 +214,8 @@
             <!-- footer centre -->
             <div class="footer-centre">
                 <address>
-                    <a class="flex nowrap align-center gap16" target="_blank" href="https://maps.app.goo.gl/HwSWq7MH8z5nQkMK6"><div class="picto p-localisation"></div>Lotissement Chanibeau<br>43600 Sainte-Sigolène</a>
-                    <a class="mt16 flex nowrap align-center gap16" href="tel:+33666529277" title="lien pour m'appeler"><div class="picto p-phone"></div>06 66 52 92 77</a>
+                    <!--  <a class="flex nowrap align-center gap16" target="_blank" href="https://maps.app.goo.gl/HwSWq7MH8z5nQkMK6"><div class="picto p-localisation"></div>Lotissement Chanibeau<br>43600 Sainte-Sigolène</a>
+                    <a class="mt16 flex nowrap align-center gap16" href="tel:+33666529277" title="lien pour m'appeler"><div class="picto p-phone"></div>06 66 52 92 77</a> -->
                     <a class="mt16 flex nowrap align-center gap16" href="mailto:laugierantoine@gmail.com" title="lien pour m'envoyer un mail"><div class="picto p-mail"></div>laugierantoine@gmail.com</a>
                     <a class="mt16 flex nowrap align-center gap16" target="_blank" href="https://www.linkedin.com/in/antoine-laugier/" title="lien vers ma page linkedIn - Nouvelle fenêtre"><div class="picto p-linkedin "></div>linkedin.com/in/antoine-laugier</a>
                     <a class="mt16 flex nowrap align-center gap16" target="_blank" href="https://github.com/Titou1206" title="lien vers ma page GitHub - Nouvelle fenêtre"><div class="picto p-github"></div>github.com/Titou1206</a>
@@ -225,10 +225,10 @@
             <div class="footer-droit">
                 <nav>
                     <ul>
-                        <li class="mt16"><a href="#hero"># Accueil</a></li>
-                        <li class="mt16"><a href="#projets"># Projets</a></li>
-                        <li class="mt16"><a href="#about"># A propos</a></li>
-                        <li class="mt16"><a href="#services"># Services</a></li>
+                        <li class="mt16"><a href="#hero" title="retour à l'accueil"># Accueil</a></li>
+                        <li class="mt16"><a href="#projets" title="lien vers la section projets"># Projets</a></li>
+                        <li class="mt16"><a href="#about" title="lien vers la section à propos de moi"># A propos</a></li>
+                        <li class="mt16"><a href="#services" title="lien vers la section services"># Services</a></li>
                     </ul>
                 </nav>
             </div>
