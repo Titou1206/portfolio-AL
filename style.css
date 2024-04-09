@@ -83,10 +83,10 @@ li{
   --font-size-p: 18px;
 }
 [data-style="normal"]{
-  --font-fam-t1: "Anton", sans-serif;
-  --font-fam-t2: "Roboto", sans-serif;
-  --font-fam-a: "Roboto", sans-serif;
-  --font-fam-p: "Cardo", serif;
+  --font-fam-t1: "Anton", sans-serif;    /* anciennement "Anton", sans-serif */
+  --font-fam-t2: "Roboto", sans-serif;  /* anciennement "Roboto", sans-serif */
+  --font-fam-a: "Roboto", sans-serif;   /* anciennement "Roboto", sans-serif */
+  --font-fam-p: "Cardo", serif;         /* anciennement "Cardo", serif */
   --font-size-t1: 64px;
   --font-size-t2: 48px;
   --font-size-t3: 32px;
