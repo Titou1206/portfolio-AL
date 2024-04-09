@@ -2,33 +2,24 @@
 /* Webfont: Luciole-Regular */
 @font-face {
   font-family: 'Luciole';
-  src: url('fonts/Luciole_webfonts/Luciole-Regular/Luciole-Regular.ttf')format('truetype');
-}
-/* Webfont: Luciole-Bold */
-@font-face {
-  font-family: 'Luciole';
   src: url('fonts/Luciole_webfonts/Luciole-Bold/Luciole-Bold.ttf')format('truetype');
 }
-/*Webfont: Anton */
+/* Webfont: Luciole-Regular */
 @font-face {
-  font-family: 'Anton';
-  src: url('fonts/Anton/Anton-Regular.ttf')format('truetype');
+  font-family: 'Luciole';
+  src: url('fonts/Luciole_webfonts/Luciole-Regular/Luciole-Regular.ttf')format('truetype');
 }
-/* Webfont: Roboto regular */
+
+/* Webfont: Karla bold */
 @font-face {
-  font-family: 'Roboto';
-  src: url('fonts/Roboto/Roboto-Regular.ttf')format('truetype');
+  font-family: 'Karla';
+  src: url('fonts/Karla/Karla-Bold.ttf')format('truetype');
 }
-/* Webfont: Roboto bold */
+/* Webfont: Karla bold */
 @font-face {
-  font-family: 'Roboto';
-  src: url('fonts/Roboto/Roboto-Bold.ttf')format('truetype');
+  font-family: 'Rubik';
+  src: url('fonts/Rubik/Rubik-Regular.ttf')format('truetype');
 }
-/*
-Cardo: font-family: "Cardo", serif; font-weight: 400;
-Roboto: font-family: "Roboto", sans-serif; font-weight: 400/700;
-Anton: font-family: "Anton", sans-serif; font-weight: 400;
-*/
 
 *{
     margin: 0;
@@ -83,10 +74,10 @@ li{
   --font-size-p: 18px;
 }
 [data-style="normal"]{
-  --font-fam-t1: "Anton", sans-serif;    /* anciennement "Anton", sans-serif */
-  --font-fam-t2: "Roboto", sans-serif;  /* anciennement "Roboto", sans-serif */
-  --font-fam-a: "Roboto", sans-serif;   /* anciennement "Roboto", sans-serif */
-  --font-fam-p: "Cardo", serif;         /* anciennement "Cardo", serif */
+  --font-fam-t1: "Karla", sans-serif;  
+  --font-fam-t2: "Karla", sans-serif;  
+  --font-fam-a: "Rubik", sans-serif;   
+  --font-fam-p: "Rubik", serif;  
   --font-size-t1: 64px;
   --font-size-t2: 48px;
   --font-size-t3: 32px;
@@ -97,7 +88,7 @@ li{
 /* police */
 h1, h2{
     font-family: var(--font-fam-t1);
-    font-weight: 400;
+    font-weight: 700;
 }
 h3, h4{
     font-family: var(--font-fam-t2);
